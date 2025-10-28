@@ -1,7 +1,86 @@
 ﻿@page "/"
 
-<PageTitle>About Me</PageTitle>
+<head>
+    <PageTitle>About Me</PageTitle>
+</head>
+<body>
+@*     <h1>About Me</h1>
 
-<h1>Fall 2025 Test</h1>
+    <img src="../Pictures/frog.jpg" alt="Not current picture of me" id="profile-picture"/>
 
-<p>Kirah Cox</p>
+    <p>My name is Kirah Cox. I am currently a Software Engineering Major at Snow College. I love to play video games, I love all sorts of crafts like cross stitching,
+        crocheting, and quilting, I love to bake, I love to read, and I absolutely love to hang out with my husband Cortlynd and my baby Snake Clementine.</p>
+
+    <h3>Education Goals</h3>
+
+    <p>I plan to get my Bachelor's degree in Software Engineering here at Snow College. I am currently a sophomore in the program and plan to graduate in the spring of 2028.</p>
+ *@
+
+ <h1>Pokémon Info</h1>
+
+<input type="text" id="pokemonName" placeholder="Enter Pokémon name or ID">
+<button id="fetchBtn">Fetch Pokémon Data</button>
+
+<div id="pokemonInfo"></div>
+
+<script>
+    $('#fetchBtn').on('click', function () {
+    const pokemonName = $('#pokemonName').val().toLowerCase();
+    if (pokemonName) {
+        $.ajax({
+            url: `https://pokeapi.co/api/v2/pokemon/${pokemonName}`,
+            method: 'GET',
+            success: function (response) {
+
+                let abilitiesHtml = '';
+                $.each(response.abilities, function (indexOrKey, value) {
+                    const abilityName = value.ability.name;
+
+                    if (indexOrKey === (response.abilities.length - 1)) {
+                        abilitiesHtml += ` ${abilityName}`;
+                    }
+                    else {
+                        abilitiesHtml += ` ${abilityName},`;
+                    }
+                });
+
+                let typesHtml = '';
+                $.each(response.types, function (indexOrKey, value) {
+                    const typeName = value.type.name;
+
+                    if (indexOrKey === (response.types.length - 1)) {
+                        typesHtml += ` ${typeName}`;
+                    }
+                    else {
+                        typesHtml += ` ${typeName},`;
+                    }
+                });
+
+                const pokemonData = `
+                    <h3>${response.name.toUpperCase()}</h3>
+                    <img src='${response.sprites.front_default}' alt='${response.name}'
+                    <p></p>
+                    <p>Height: ${response.height / 10} m</p>
+                    <p>Weight: ${response.weight / 10} kg</p>
+                    <p>Types: ${typesHtml}</p>
+                    <p>Abilities: ${abilitiesHtml}</p>
+                `;
+
+                $('#pokemonInfo').html(pokemonData);
+            },
+            error: function () {
+                $('#pokemonInfo').html('<p>Pokémon not found. Please try again.</p>');
+            }
+        });
+    } else {
+        $('#pokemonInfo').html('<p>Please enter a Pokémon name or ID.</p>');
+    }
+});
+</script>
+</body>
+@* <footer>
+    <h4>Contact</h4>
+    <p>Email: kirahanncox@gmail.com</p>
+    <p>Phone: 435-314-9782</p>
+</footer> *@
+
