@@ -1,5 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Tinos', serif;
 }
 
 h1:focus {
@@ -114,4 +119,40 @@ code {
 .profile-picture:hover {
     box-shadow: 2px 2px 2px rgb(191, 191, 191);
     transform: translateY(-5px);
+}
+
+.flex-whole-nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #02000D;
+    align-items: center;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+    .nav-bar a {
+        text-decoration: none;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        color: #F1F0EF;
+    }
+
+        .nav-bar a:hover {
+            transition: transform 0.3s ease;
+            background-color: #232324;
+            transform: translateY(-2px);
+        }
+
+.main-nav-link a {
+    font-size: xx-large;
+    text-decoration: none;
+    color: #F1F0EF;
+    padding-left: 3rem;
 }
