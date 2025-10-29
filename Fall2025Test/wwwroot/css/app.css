@@ -106,6 +106,12 @@ code {
 
 
 
-.profile-picture{
+.profile-picture {
     display: none;
+    transition: transform 0.3s ease;
+}
+
+.profile-picture:hover {
+    box-shadow: 2px 2px 2px rgb(191, 191, 191);
+    transform: translateY(-5px);
 }
