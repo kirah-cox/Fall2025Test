@@ -7,6 +7,11 @@ html, body {
     font-family: 'Tinos', serif;
 }
 
+body {
+    background-color: #F1F0EF;
+    color: #02000D;
+}
+
 h1:focus {
     outline: none;
 }
@@ -111,15 +116,68 @@ code {
 
 
 
+
+.background-color-box {
+    position: relative;
+}
+
+    .background-color-box::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 40rem;
+        background-image: linear-gradient(to top, #FFBEBE, #FF9D9D);
+        z-index: -3;
+        box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.25);
+    }
+
+.background-small-pink-box {
+    position: relative;
+}
+
+    .background-small-pink-box::before {
+        content: "";
+        top: 26.75rem;
+        left: 35.5rem;
+        transform: rotate(-4deg);
+        position: absolute;
+        width: 40.5%;
+        height: 25rem;
+        background-color: #FF9D9D;
+        z-index: -2;
+    }
+
+.background-small-black-box {
+    position: relative;
+}
+
+    .background-small-black-box::before {
+        content: "";
+        top: 26.75rem;
+        left: 35.5rem;
+        transform: rotate(4deg);
+        position: absolute;
+        width: 40.5%;
+        height: 25rem;
+        background-color: #02000D;
+        z-index: -1;
+    }
+
+
 .profile-picture {
     display: none;
     transition: transform 0.3s ease;
+    width: 40%;
+    height: 25rem;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 6rem;
 }
 
-.profile-picture:hover {
-    box-shadow: 2px 2px 2px rgb(191, 191, 191);
-    transform: translateY(-5px);
-}
+    .profile-picture:hover {
+        box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.5);
+        transform: translateY(-5px);
+    }
 
 .flex-whole-nav-bar {
     display: flex;
@@ -127,6 +185,7 @@ code {
     justify-content: space-between;
     background-color: #02000D;
     align-items: center;
+    box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.5);
 }
 
 .nav-bar {
@@ -137,11 +196,13 @@ code {
 
     .nav-bar a {
         text-decoration: none;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
         color: #F1F0EF;
+        font-size: 1.25rem;
+        font-weight: 100;
     }
 
         .nav-bar a:hover {
@@ -151,8 +212,66 @@ code {
         }
 
 .main-nav-link a {
-    font-size: xx-large;
+    font-size: 2.5rem;
+    font-weight: 100;
     text-decoration: none;
     color: #F1F0EF;
-    padding-left: 3rem;
+    padding-left: 4rem;
+}
+
+.main-body-about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me-header {
+    font-size: 5rem;
+    font-weight: 100;
+    margin-top: 10rem;
+    text-shadow: 2px 2px 4px rgb(17, 17, 17, 0.5);
+}
+
+.about-me-paragraph{
+    max-width: 50%;
+    margin-top: 1rem;
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+
+.education-goals-header {
+    margin-top: 5rem;
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+.education-goals-paragraph {
+    max-width: 50%;
+    margin-top: 2rem;
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+
+.whole-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #02000D;
+    color: #F1F0EF;
+    height: 15rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-top: 2rem;
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-name{
+    font-size: 2rem;
 }
