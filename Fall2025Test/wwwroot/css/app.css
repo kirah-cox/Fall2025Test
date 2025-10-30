@@ -118,12 +118,7 @@ code {
 
 
 .background-color-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    position: relative;
 }
 
     .background-color-box::before {
@@ -171,64 +166,12 @@ code {
                              0px 63px, 61px 0px, 69px 84px, 18px 89px, 83px 37px, 0 0;
     }
 
-
-
-
-/*    .background-color-box::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 40rem;
-        background-image: linear-gradient(to top, #07203F, #02000D),
-            repeating-radial-gradient( circle, rgba(255, 255, 255, 0.2) 0px,
-            rgba(255, 255, 255, 0.2) 2px,
-            transparent 2px, transparent 20px
-        );
-        z-index: -3;
-        box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.25);
-    }*/
-
-/*.background-small-pink-box {
-    position: relative;
-}
-
-    .background-small-pink-box::before {
-        content: "";
-        top: 26.75rem;
-        left: 35.5rem;
-        transform: rotate(-4deg);
-        position: absolute;
-        width: 40.5%;
-        height: 25rem;
-        background-color: #FF9D9D;
-        z-index: -2;
-    }
-
-.background-small-black-box {
-    position: relative;
-}
-
-    .background-small-black-box::before {
-        content: "";
-        top: 26.75rem;
-        left: 35.5rem;
-        transform: rotate(4deg);
-        position: absolute;
-        width: 40.5%;
-        height: 25rem;
-        background-color: #02000D;
-        z-index: -1;
-    }*/
-
-
-
 .flex-whole-nav-bar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    z-index: 1;
+    background-color: #02000D;
 }
 
 .nav-bar {
@@ -262,11 +205,18 @@ code {
     padding-left: 4rem;
 }
 
+.whole-about-me-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .main-body-about-me {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex: 1;
 }
 
     .main-body-about-me-top {
@@ -285,16 +235,17 @@ code {
         }
 
     .main-body-about-me-bottom {
-        margin: 5rem;
+        margin-top: 10rem;
         display: flex;
         align-items: center;
+        justify-content: space-evenly;
     }
 
         .main-body-about-me-bottom-left {
             margin: 5rem;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            width: 40%;
         }
 
 .profile-picture {
@@ -308,6 +259,24 @@ code {
 
     .profile-picture:hover {
         box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.5);
+        transform: translateY(-5px);
+    }
+
+.contact-me-button {
+    display: inline-block;
+    background-color: #07203F;
+    color: #F1F0EF;
+    padding: 1rem;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.5);
+    margin: 1rem;
+}
+    .contact-me-button:hover {
+        background-color: #1a385d;
         transform: translateY(-5px);
     }
 
@@ -326,13 +295,11 @@ code {
 }
 
 .education-goals-header {
-    margin-top: 5rem;
     font-weight: 100;
     font-size: 2rem;
 }
 
 .education-goals-paragraph {
-    max-width: 50%;
     margin-top: 2rem;
     font-weight: 100;
     font-size: 1.2rem;
@@ -344,19 +311,17 @@ code {
     align-items: center;
     background-color: #02000D;
     color: #F1F0EF;
-    height: 10rem;
+    height: 8rem;
     padding-left: 5rem;
     padding-right: 5rem;
-    margin-top: 2rem;
     font-weight: 100;
     font-size: 1.2rem;
 }
 
-.footer-contact {
-    display: flex;
-    flex-direction: column;
-}
-
 .footer-name{
     font-size: 2rem;
+}
+
+.social-media-logos {
+    display: flex;
 }
