@@ -472,11 +472,52 @@ code {
 
 .main-body-resume {
     margin-top: 5rem;
+    margin-bottom: 5rem;
     display: flex;
     justify-content: space-evenly;
     color: #F1F0EF;
     flex: 1;
 }
+
+.main-body-left{
+    display: flex;
+}
+
+    .main-body-left-left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main-body-left-line-class{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-body-left-line {
+        margin: auto;
+        width: 0.25rem;
+        height: 5rem;
+        background-color: #F1F0EF;
+    }
+
+    .main-body-left-horizontal-line {
+        margin: 0;
+        height: 0.15rem;
+        width: 50rem;
+        background-color: #F1F0EF;
+    }
+
+    .main-body-left-circle{
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: #F1F0EF;
+        border-radius: 50%;
+    }
+
+    .main-body-left-right {
+
+    }
 
 .resume-headers{
     font-weight: 100;
@@ -484,18 +525,15 @@ code {
 }
 
 .resume-content {
-    font-weight: bold;
     font-size: 1.35rem;
+    font-weight: 100;
+    list-style-type: none;
+    margin-top: 1rem;
 }
 
-    .resume-content ul {
-        font-weight: 100;
-        list-style-type: none;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
 
 .resume-content-time {
+    list-style-type: none;
     font-weight: 100;
     font-style: italic;
     font-size: 1.15rem;
