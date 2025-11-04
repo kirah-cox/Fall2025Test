@@ -182,13 +182,13 @@ code {
 
     .nav-bar a {
         text-decoration: none;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        width: 9rem;
         padding-top: 1.75rem;
         padding-bottom: 1.75rem;
         color: #F1F0EF;
         font-size: 1.25rem;
         font-weight: 100;
+        text-align: center;
     }
 
         .nav-bar a:hover {
@@ -204,6 +204,37 @@ code {
     color: #F1F0EF;
     padding-left: 4rem;
 }
+
+.hamburger-menu {
+    display: none;
+}
+
+.hamburger-nav-bar {
+    display: none;
+}
+
+.hamburger-nav-bar-visible {
+    display: flex;
+    flex-direction: column;
+    background-color: #02000D;
+}
+
+    .hamburger-nav-bar-visible a {
+        text-decoration: none;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+        color: #F1F0EF;
+        font-size: 1.25rem;
+        font-weight: 100;
+    }
+
+        .hamburger-nav-bar-visible a:hover {
+            transition: transform 0.3s ease;
+            background-color: #232324;
+            transform: translateY(-2px);
+        }
 
 .whole-about-me-page {
     display: flex;
@@ -232,6 +263,7 @@ code {
             align-items: center;
             justify-content: center;
             width: 40%;
+            min-width: 25rem;
         }
 
     .main-body-about-me-bottom {
@@ -246,6 +278,7 @@ code {
             display: flex;
             flex-direction: column;
             width: 40%;
+            min-width: 25rem;
         }
 
 .profile-picture {
@@ -324,4 +357,51 @@ code {
 
 .social-media-logos {
     display: flex;
+}
+
+@media (max-width: 80rem) {
+    .main-body-about-me-top {
+        flex-direction: column;
+        align-items: center;
+        max-width: 50rem;
+    }
+
+    .main-body-about-me-bottom {
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+        margin-top: 5rem;
+    }
+
+    .main-body-about-me-bottom-left {
+        width: 100%;
+        margin: 1rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        max-width: 40rem;
+    }
+
+    .profile-picture {
+        width: 95%;
+        margin: 1rem;
+    }
+
+    .main-body-about-me-top-right {
+        width: 100%;
+        margin: 1rem;
+        margin-top: 5rem;
+        max-width: 50rem;
+    }
+
+    .background-color-box::before {
+        height: 65rem;
+    }
+
+    .flex-whole-nav-bar #main-links {
+        display: none;
+    }
+
+    .hamburger-menu{
+        display: block;
+    }
 }

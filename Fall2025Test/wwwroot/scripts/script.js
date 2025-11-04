@@ -54,3 +54,35 @@ window.site = (function () {
 window.site.registerHandler(function () {
     $('#profilePicture').fadeIn(1000);
 });
+
+window.site.registerHandler(function () {
+    $(document).off('click', '#hamburger');
+    $(document).on('click', '#hamburger', function () {
+        const navBar = $('#hamburger-nav');
+
+        if (navBar.hasClass('hamburger-nav-bar-visible')) {
+            navBar.removeClass('hamburger-nav-bar-visible').addClass('hamburger-nav-bar');
+        } else {
+            navBar.removeClass('hamburger-nav-bar').addClass('hamburger-nav-bar-visible');
+        }
+    });
+
+    $(window).off('resize.hamburger');
+    $(window).on('resize.hamburger', function () {
+        const navBar = $('#hamburger-nav');
+        if ($(window).width() >= 80 * 16) {
+            navBar.removeClass('hamburger-nav-bar-visible').addClass('hamburger-nav-bar');
+        }
+    });
+
+    const navBar = $('#hamburger-nav');
+    if ($(window).width() >= 80 * 16) {
+        navBar.removeClass('hamburger-nav-bar-visible').addClass('hamburger-nav-bar');
+    }
+
+    $(document).off('click', '#hamburger-nav a');
+    $(document).on('click', '#hamburger-nav a', function () {
+        const navBar = $('#hamburger-nav');
+        navBar.removeClass('hamburger-nav-bar-visible').addClass('hamburger-nav-bar');
+    });
+});
