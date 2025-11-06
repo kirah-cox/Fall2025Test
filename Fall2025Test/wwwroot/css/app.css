@@ -174,7 +174,7 @@ code {
         content: "";
         position: absolute;
         width: 100%;
-        height: 100vh;
+        height: 220vh;
         z-index: -1;
         box-shadow: 2px 2px 4px rgba(17, 17, 17, 0.25);
 
@@ -467,57 +467,96 @@ code {
 .whole-resume-page {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 220vh;
+}
+
+.resume-main-header {
+    font-size: 4rem;
+    font-weight: 100;
+    text-align: center;
+    margin: 5rem;
+    margin-top: 10rem;
 }
 
 .main-body-resume {
     margin-top: 5rem;
     margin-bottom: 5rem;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     color: #F1F0EF;
     flex: 1;
+    margin: auto;
 }
 
-.main-body-left{
+.main-body-top{
     display: flex;
 }
 
-    .main-body-left-left {
+    .main-body-top-left {
         display: flex;
         flex-direction: column;
+        align-items: flex-end;
     }
 
-    main-body-left-line-class{
+        .main-body-top-left div {
+            width: 45rem;
+        }
+
+    main-body-top-line-class{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .main-body-left-line {
+    .main-body-top-line {
         margin: auto;
         width: 0.25rem;
         height: 5rem;
         background-color: #F1F0EF;
     }
 
-    .main-body-left-horizontal-line {
+    .main-body-top-horizontal-line-left {
         margin: 0;
+        margin-top: 0.6rem;
         height: 0.15rem;
-        width: 50rem;
+        width: 45rem;
         background-color: #F1F0EF;
     }
 
-    .main-body-left-circle{
+    .main-body-top-horizontal-line-right {
+        margin: 0;
+        margin-top: 0.6rem;
+        height: 0.15rem;
+        width: 38rem;
+        background-color: #F1F0EF;
+    }
+
+    .main-body-top-circle{
         width: 1.5rem;
         height: 1.5rem;
         background-color: #F1F0EF;
         border-radius: 50%;
     }
 
-    .main-body-left-right {
-
+    .main-body-top-right {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        margin-right: 7rem;
     }
+
+.main-body-bottom {
+    width: 50rem;
+    height: 22rem;
+    background-color: #F1F0EF;
+    color: #07203F;
+    margin: auto;
+    margin-bottom: 5rem;
+    margin-top: 0;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.5);
+}
 
 .resume-headers{
     font-weight: 100;
@@ -546,6 +585,11 @@ code {
     list-style-position: inside;
     text-indent: 2rem;
     font-size: 1rem;
+}
+
+.resume-button-flex{
+    display: flex;
+    justify-content: center;
 }
 
 .resume-button {
