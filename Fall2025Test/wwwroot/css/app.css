@@ -215,6 +215,55 @@ code {
                              0px 63px, 61px 0px, 69px 84px, 18px 89px, 83px 37px, 0 0;
     }
 
+.background-color-box-tables {
+    position: relative;
+}
+
+    .background-color-box-tables::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 120vh;
+        z-index: -1;
+        box-shadow: 2px 2px 4px rgba(17, 17, 17, 0.25);
+
+        background-image:
+            radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
+            radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
+            radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
+            radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+            radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
+            radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
+            radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
+            radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
+            radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
+            radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
+            radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
+            radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
+            radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
+            radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+            radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
+            radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
+            radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
+            radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
+            radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
+            radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
+            linear-gradient(to top, #07203F, #02000D);
+
+        background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+                           repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, no-repeat;
+
+        background-size: 125px 125px, 225px 225px, 325px 325px, 150px 150px, 250px 250px,
+                         350px 350px, 425px 425px, 225px 225px, 325px 325px, 150px 150px,
+                         150px 150px, 250px 250px, 350px 350px, 175px 175px, 275px 275px,
+                         375px 375px, 225px 225px, 250px 250px, 350px 350px, 175px 175px, auto;
+
+        background-position: 33px 100px, 15px 25px, 40px 15px, 9px 5px, 25px 3px,
+                             50px 35px, 57px 47px, 5px 24px, 38px 45px, 95px 63px,
+                             8px 41px, 72px 29px, 79px 50px, 65px 17px, 10px 70px,
+                             0px 63px, 61px 0px, 69px 84px, 18px 89px, 83px 37px, 0 0;
+    }
+
 .flex-whole-nav-bar {
     display: flex;
     flex-direction: row;
@@ -611,4 +660,68 @@ code {
     .resume-button:hover {
         background-color: #1a385d;
         transform: translateY(-5px);
+    }
+
+
+
+
+
+
+
+
+
+
+
+.whole-tables-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 120vh;
+}
+
+.main-body-tables {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.table-one-header {
+    font-weight: 100;
+    font-size: 3rem;
+    color: #F1F0EF;
+    width: 90%;
+    margin-bottom: 1rem;
+}
+
+.table-one {
+    background-color: #F1F0EF;
+    color: #07203F;
+    border-collapse: collapse;
+    border: none;
+    width: 90%;
+    font-size: 1.25rem;
+}
+
+    .table-one th, td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    .table-one th {
+        background-color: #07203F;
+        color: #F1F0EF;
+    }
+
+    .table-one tr {
+        transition: transform 0.3s ease;
+    }
+
+    .table-one tr:nth-child(even) {
+        background-color: #DBDAD9;
+    }
+
+    .table-one tr:hover {
+        transform: translateY(-2px);
+        box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.2);
     }
