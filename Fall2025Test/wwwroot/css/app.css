@@ -725,3 +725,8 @@ code {
         transform: translateY(-2px);
         box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.2);
     }
+
+.table-highlight{
+    background-color: #1a385d;
+    color: #F1F0EF;
+}

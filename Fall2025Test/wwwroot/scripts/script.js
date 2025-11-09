@@ -86,3 +86,32 @@ window.site.registerHandler(function () {
         navBar.removeClass('hamburger-nav-bar-visible').addClass('hamburger-nav-bar');
     });
 });
+
+window.site.registerHandler(function () {
+    $('#search-table-one').on('keyup', function () {
+        let value = $(this).val().toLowerCase();
+
+        $('#table-one tbody tr').filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+            $(this).addClass('table-highlight');
+            if (!value) {
+                $(this).removeClass('table-highlight');
+            }
+        });
+    });
+});
+
+
+window.site.registerHandler(function () {
+    $('#search-table-two').on('keyup', function () {
+        let value = $(this).val().toLowerCase();
+
+        $('#table-two tbody tr').filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+            $(this).addClass('table-highlight');
+            if (!value) {
+                $(this).removeClass('table-highlight');
+            }
+        });
+    });
+});
