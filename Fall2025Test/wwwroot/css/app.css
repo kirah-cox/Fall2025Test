@@ -117,152 +117,8 @@ code {
 
 
 
-.background-color-box {
-    position: relative;
-}
 
-    .background-color-box::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 45rem;
-        z-index: -1;
-        box-shadow: 2px 2px 4px rgba(17, 17, 17, 0.25);
 
-        background-image:
-            radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
-            radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
-            radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
-            radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
-            radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
-            radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
-            radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
-            radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
-            radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
-            radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
-            radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
-            radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
-            radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
-            radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
-            radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
-            radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
-            radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
-            radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
-            radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
-            radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
-            linear-gradient(to top, #07203F, #02000D);
-
-        background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
-                           repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, no-repeat;
-
-        background-size: 125px 125px, 225px 225px, 325px 325px, 150px 150px, 250px 250px,
-                         350px 350px, 425px 425px, 225px 225px, 325px 325px, 150px 150px,
-                         150px 150px, 250px 250px, 350px 350px, 175px 175px, 275px 275px,
-                         375px 375px, 225px 225px, 250px 250px, 350px 350px, 175px 175px, auto;
-
-        background-position: 33px 100px, 15px 25px, 40px 15px, 9px 5px, 25px 3px,
-                             50px 35px, 57px 47px, 5px 24px, 38px 45px, 95px 63px,
-                             8px 41px, 72px 29px, 79px 50px, 65px 17px, 10px 70px,
-                             0px 63px, 61px 0px, 69px 84px, 18px 89px, 83px 37px, 0 0;
-    }
-
-.background-color-box-resume {
-    position: relative;
-}
-
-    .background-color-box-resume::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 220vh;
-        z-index: -1;
-        box-shadow: 2px 2px 4px rgba(17, 17, 17, 0.25);
-
-        background-image:
-            radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
-            radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
-            radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
-            radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
-            radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
-            radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
-            radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
-            radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
-            radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
-            radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
-            radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
-            radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
-            radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
-            radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
-            radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
-            radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
-            radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
-            radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
-            radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
-            radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
-            linear-gradient(to top, #07203F, #02000D);
-
-        background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
-                           repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, no-repeat;
-
-        background-size: 125px 125px, 225px 225px, 325px 325px, 150px 150px, 250px 250px,
-                         350px 350px, 425px 425px, 225px 225px, 325px 325px, 150px 150px,
-                         150px 150px, 250px 250px, 350px 350px, 175px 175px, 275px 275px,
-                         375px 375px, 225px 225px, 250px 250px, 350px 350px, 175px 175px, auto;
-
-        background-position: 33px 100px, 15px 25px, 40px 15px, 9px 5px, 25px 3px,
-                             50px 35px, 57px 47px, 5px 24px, 38px 45px, 95px 63px,
-                             8px 41px, 72px 29px, 79px 50px, 65px 17px, 10px 70px,
-                             0px 63px, 61px 0px, 69px 84px, 18px 89px, 83px 37px, 0 0;
-    }
-
-.background-color-box-tables {
-    position: relative;
-}
-
-    .background-color-box-tables::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 120vh;
-        z-index: -1;
-        box-shadow: 2px 2px 4px rgba(17, 17, 17, 0.25);
-
-        background-image:
-            radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
-            radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
-            radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
-            radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
-            radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
-            radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
-            radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
-            radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
-            radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
-            radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
-            radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
-            radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
-            radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
-            radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
-            radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
-            radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
-            radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
-            radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
-            radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
-            radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
-            linear-gradient(to top, #07203F, #02000D);
-
-        background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
-                           repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, no-repeat;
-
-        background-size: 125px 125px, 225px 225px, 325px 325px, 150px 150px, 250px 250px,
-                         350px 350px, 425px 425px, 225px 225px, 325px 325px, 150px 150px,
-                         150px 150px, 250px 250px, 350px 350px, 175px 175px, 275px 275px,
-                         375px 375px, 225px 225px, 250px 250px, 350px 350px, 175px 175px, auto;
-
-        background-position: 33px 100px, 15px 25px, 40px 15px, 9px 5px, 25px 3px,
-                             50px 35px, 57px 47px, 5px 24px, 38px 45px, 95px 63px,
-                             8px 41px, 72px 29px, 79px 50px, 65px 17px, 10px 70px,
-                             0px 63px, 61px 0px, 69px 84px, 18px 89px, 83px 37px, 0 0;
-    }
 
 .flex-whole-nav-bar {
     display: flex;
@@ -334,10 +190,53 @@ code {
             transform: translateY(-2px);
         }
 
+
+
+
+
+
+
+
+
 .whole-about-me-page {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100dvh;
+    background-image:
+    radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
+    radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
+    radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
+    radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
+    radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
+    radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
+    radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(to top, #07203F, #02000D);
+
+    background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+                        repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, no-repeat;
+
+    background-size: 125px 125px, 225px 225px, 325px 325px, 150px 150px, 250px 250px,
+                        350px 350px, 425px 425px, 225px 225px, 325px 325px, 150px 150px,
+                        150px 150px, 250px 250px, 350px 350px, 175px 175px, 275px 275px,
+                        375px 375px, 225px 225px, 250px 250px, 350px 350px, 175px 175px, auto;
+
+    background-position: 33px 100px, 15px 25px, 40px 15px, 9px 5px, 25px 3px,
+                            50px 35px, 57px 47px, 5px 24px, 38px 45px, 95px 63px,
+                            8px 41px, 72px 29px, 79px 50px, 65px 17px, 10px 70px,
+                            0px 63px, 61px 0px, 69px 84px, 18px 89px, 83px 37px, 0 0;
 }
 
 .main-body-about-me {
@@ -351,7 +250,7 @@ code {
     .main-body-about-me-top {
         display: flex;
         justify-content: space-evenly;
-        margin-top: 5rem;
+        margin: auto;
     }
 
         .main-body-about-me-top-right {
@@ -365,10 +264,12 @@ code {
         }
 
     .main-body-about-me-bottom {
-        margin-top: 5rem;
+        margin-top: auto;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        background-color: #F1F0EF;
+        padding: 3rem;
     }
 
         .main-body-about-me-bottom-left {
@@ -468,12 +369,12 @@ code {
     .main-body-about-me-bottom {
         flex-direction: column;
         align-items: center;
-        margin: 1rem;
         margin-top: 5rem;
+        width: 100%;
     }
 
     .main-body-about-me-bottom-left {
-        width: 100%;
+        width: 90%;
         margin: 1rem;
         margin-top: 5rem;
         margin-bottom: 5rem;
@@ -491,10 +392,6 @@ code {
         margin: 1rem;
         margin-top: 5rem;
         max-width: 50rem;
-    }
-
-    .background-color-box::before {
-        height: 65rem;
     }
 
     .flex-whole-nav-bar #main-links {
@@ -517,30 +414,65 @@ code {
 .whole-resume-page {
     display: flex;
     flex-direction: column;
-    min-height: 220vh;
+    min-height: 100dvh;
+    background-image:
+    radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
+    radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
+    radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
+    radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
+    radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
+    radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
+    radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(to top, #07203F, #02000D);
+
+    background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+                        repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, no-repeat;
+
+    background-size: 125px 125px, 225px 225px, 325px 325px, 150px 150px, 250px 250px,
+                        350px 350px, 425px 425px, 225px 225px, 325px 325px, 150px 150px,
+                        150px 150px, 250px 250px, 350px 350px, 175px 175px, 275px 275px,
+                        375px 375px, 225px 225px, 250px 250px, 350px 350px, 175px 175px, auto;
+
+    background-position: 33px 100px, 15px 25px, 40px 15px, 9px 5px, 25px 3px,
+                            50px 35px, 57px 47px, 5px 24px, 38px 45px, 95px 63px,
+                            8px 41px, 72px 29px, 79px 50px, 65px 17px, 10px 70px,
+                            0px 63px, 61px 0px, 69px 84px, 18px 89px, 83px 37px, 0 0;
 }
 
-.resume-main-header {
-    font-size: 4rem;
-    font-weight: 100;
-    text-align: center;
-    margin: 5rem;
-    margin-top: 10rem;
-}
+    .resume-main-header {
+        font-size: 4rem;
+        font-weight: 100;
+        text-align: center;
+        margin: 5rem;
+        margin-top: 10rem;
+    }
 
-.main-body-resume {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    display: flex;
-    flex-direction: column;
-    color: #F1F0EF;
-    flex: 1;
-    margin: auto;
-}
+    .main-body-resume {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        color: #F1F0EF;
+        flex: 1;
+        margin: auto;
+    }
 
-.main-body-top{
-    display: flex;
-}
+    .main-body-top {
+        display: flex;
+    }
 
     .main-body-top-left {
         display: flex;
@@ -552,7 +484,7 @@ code {
             width: 45rem;
         }
 
-    main-body-top-line-class{
+    main-body-top-line-class {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -577,11 +509,11 @@ code {
         margin: 0;
         margin-top: 0.6rem;
         height: 0.15rem;
-        width: 38rem;
+        width: 45rem;
         background-color: #F1F0EF;
     }
 
-    .main-body-top-circle{
+    .main-body-top-circle {
         width: 1.5rem;
         height: 1.5rem;
         background-color: #F1F0EF;
@@ -592,76 +524,75 @@ code {
         display: flex;
         flex-direction: column;
         align-content: flex-start;
-        margin-right: 7rem;
     }
 
-.main-body-bottom {
-    width: 50rem;
-    height: 22rem;
-    background-color: #F1F0EF;
-    color: #07203F;
-    margin: auto;
-    margin-bottom: 5rem;
-    margin-top: 0;
-    padding: 1rem;
-    border-radius: 15px;
-    box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.5);
-}
-
-.resume-headers{
-    font-weight: 100;
-    font-size: 3rem;
-}
-
-.resume-content {
-    font-size: 1.35rem;
-    font-weight: 100;
-    list-style-type: none;
-    margin-top: 1rem;
-}
-
-
-.resume-content-time {
-    list-style-type: none;
-    font-weight: 100;
-    font-style: italic;
-    font-size: 1.15rem;
-    margin-bottom: 1rem;
-}
-
-.resume-content-descriptions {
-    font-weight: 100;
-    list-style-type: disc;
-    list-style-position: inside;
-    text-indent: 2rem;
-    font-size: 1rem;
-}
-
-.resume-button-flex{
-    display: flex;
-    justify-content: center;
-}
-
-.resume-button {
-    display: inline-block;
-    background-color: #07203F;
-    color: #F1F0EF;
-    padding: 1rem;
-    border-radius: 15px;
-    text-decoration: none;
-    font-weight: 100;
-    font-size: 1.2rem;
-    transition: transform 0.3s ease;
-    box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.5);
-    margin: 1rem;
-    width: 6rem;
-    text-align: center;
-}
-
-    .resume-button:hover {
-        background-color: #1a385d;
-        transform: translateY(-5px);
+    .main-body-bottom {
+        width: 50rem;
+        height: 22rem;
+        background-color: #F1F0EF;
+        color: #07203F;
+        margin: auto;
+        margin-bottom: 5rem;
+        margin-top: 0;
+        padding: 1rem;
+        border-radius: 15px;
+        box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.5);
     }
+
+    .resume-headers {
+        font-weight: 100;
+        font-size: 3rem;
+    }
+
+    .resume-content {
+        font-size: 1.35rem;
+        font-weight: 100;
+        list-style-type: none;
+        margin-top: 1rem;
+    }
+
+
+    .resume-content-time {
+        list-style-type: none;
+        font-weight: 100;
+        font-style: italic;
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+    }
+
+    .resume-content-descriptions {
+        font-weight: 100;
+        list-style-type: disc;
+        list-style-position: inside;
+        text-indent: 2rem;
+        font-size: 1rem;
+    }
+
+    .resume-button-flex {
+        display: flex;
+        justify-content: center;
+    }
+
+    .resume-button {
+        display: inline-block;
+        background-color: #07203F;
+        color: #F1F0EF;
+        padding: 1rem;
+        border-radius: 15px;
+        text-decoration: none;
+        font-weight: 100;
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+        box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.5);
+        margin: 1rem;
+        width: 6rem;
+        text-align: center;
+    }
+
+        .resume-button:hover {
+            background-color: #1a385d;
+            transform: translateY(-5px);
+        }
 
 
 
@@ -676,58 +607,93 @@ code {
 .whole-tables-page {
     display: flex;
     flex-direction: column;
-    min-height: 120vh;
+    min-height: 100dvh;
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
+        radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
+        radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
+        radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
+        radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
+        radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
+        radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(to top, #07203F, #02000D);
+
+    background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+                        repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, no-repeat;
+
+    background-size: 125px 125px, 225px 225px, 325px 325px, 150px 150px, 250px 250px,
+                        350px 350px, 425px 425px, 225px 225px, 325px 325px, 150px 150px,
+                        150px 150px, 250px 250px, 350px 350px, 175px 175px, 275px 275px,
+                        375px 375px, 225px 225px, 250px 250px, 350px 350px, 175px 175px, auto;
+
+    background-position: 33px 100px, 15px 25px, 40px 15px, 9px 5px, 25px 3px,
+                            50px 35px, 57px 47px, 5px 24px, 38px 45px, 95px 63px,
+                            8px 41px, 72px 29px, 79px 50px, 65px 17px, 10px 70px,
+                            0px 63px, 61px 0px, 69px 84px, 18px 89px, 83px 37px, 0 0;
 }
 
-.main-body-tables {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-}
-
-.table-one-header {
-    font-weight: 100;
-    font-size: 3rem;
-    color: #F1F0EF;
-    width: 90%;
-    margin-bottom: 1rem;
-}
-
-.table-one {
-    background-color: #F1F0EF;
-    color: #07203F;
-    border-collapse: collapse;
-    border: none;
-    width: 90%;
-    font-size: 1.25rem;
-}
-
-    .table-one th, td {
-        padding: 10px;
-        text-align: left;
+    .main-body-tables {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
     }
 
-    .table-one th {
-        background-color: #07203F;
+    .table-one-header {
+        font-weight: 100;
+        font-size: 3rem;
+        color: #F1F0EF;
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .table-one {
+        background-color: #F1F0EF;
+        color: #07203F;
+        border-collapse: collapse;
+        border: none;
+        width: 90%;
+        font-size: 1.25rem;
+    }
+
+        .table-one th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .table-one th {
+            background-color: #07203F;
+            color: #F1F0EF;
+        }
+
+        .table-one tr {
+            transition: transform 0.3s ease;
+        }
+
+            .table-one tr:nth-child(even) {
+                background-color: #DBDAD9;
+            }
+
+            .table-one tr:hover {
+                transform: translateY(-2px);
+                box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.2);
+            }
+
+    .table-highlight {
+        background-color: #1a385d;
         color: #F1F0EF;
     }
-
-    .table-one tr {
-        transition: transform 0.3s ease;
-    }
-
-    .table-one tr:nth-child(even) {
-        background-color: #DBDAD9;
-    }
-
-    .table-one tr:hover {
-        transform: translateY(-2px);
-        box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.2);
-    }
-
-.table-highlight{
-    background-color: #1a385d;
-    color: #F1F0EF;
-}
