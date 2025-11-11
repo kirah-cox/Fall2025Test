@@ -284,9 +284,10 @@ code {
     display: none;
     transition: transform 0.3s ease;
     height: 35rem;
-    width: 30rem;
+    max-width: 30rem;
     object-fit: cover;
     object-position: center;
+    margin-bottom: 2rem;
 }
 
     .profile-picture:hover {
@@ -697,3 +698,11 @@ code {
         background-color: #1a385d;
         color: #F1F0EF;
     }
+
+.sorted {
+    cursor: pointer;
+}
+
+.reverse-sorted {
+    cursor: pointer;
+}

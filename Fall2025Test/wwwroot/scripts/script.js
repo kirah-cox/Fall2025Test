@@ -55,6 +55,7 @@ window.site.registerHandler(function () {
     $('#profilePicture').fadeIn(1000);
 });
 
+
 window.site.registerHandler(function () {
     $(document).off('click', '#hamburger');
     $(document).on('click', '#hamburger', function () {
@@ -87,6 +88,7 @@ window.site.registerHandler(function () {
     });
 });
 
+
 window.site.registerHandler(function () {
     $('#search-table-one').on('keyup', function () {
         let value = $(this).val().toLowerCase();
@@ -112,6 +114,38 @@ window.site.registerHandler(function () {
             if (!value) {
                 $(this).removeClass('table-highlight');
             }
+        });
+    });
+});
+
+window.site.registerHandler(function () {
+    $('#table-one th').off('click');
+    $('#table-one th').on('click', function () {
+        let table = $(this).closest('table');
+        let tbody = table.find('tbody');
+        let rows = tbody.find('tr').get();
+        let columnIndex = $(this).index();
+        let header = $(this).closest('#table-one th');
+
+        if ($(header).hasClass('reverse-sorted')) {
+            $(header).removeClass('reverse-sorted').addClass('sorted')
+            rows.sort(function (a, b) {
+                let aText = $(a).find('td').eq(columnIndex).text().toUpperCase();
+                let bText = $(b).find('td').eq(columnIndex).text().toUpperCase();
+                return aText.localeCompare(bText);
+            });
+        }
+        else if ($(header).hasClass('sorted')) {
+            $(header).removeClass('sorted').addClass('reverse-sorted')
+            rows.sort(function (a, b) {
+                let aText = $(a).find('td').eq(columnIndex).text().toUpperCase();
+                let bText = $(b).find('td').eq(columnIndex).text().toUpperCase();
+                return -aText.localeCompare(bText);
+            });
+        }
+
+        $.each(rows, function (index, row) {
+            tbody.append(row);
         });
     });
 });
