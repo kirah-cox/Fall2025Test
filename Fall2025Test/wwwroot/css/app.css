@@ -365,7 +365,7 @@ code {
         }
 
     .main-body-about-me-bottom {
-        margin-top: 10rem;
+        margin-top: 5rem;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -382,8 +382,8 @@ code {
 .profile-picture {
     display: none;
     transition: transform 0.3s ease;
-    height: 30rem;
-    width: 45rem;
+    height: 35rem;
+    width: 30rem;
     object-fit: cover;
     object-position: center;
 }
@@ -481,7 +481,8 @@ code {
     }
 
     .profile-picture {
-        width: 95%;
+        height: 29rem;
+        width: 25rem;
         margin: 1rem;
     }
 
