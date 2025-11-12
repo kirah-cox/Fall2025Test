@@ -5,18 +5,25 @@
     <PageTitle>Tables</PageTitle>
 </head>
 
-<div class="background-color-box-tables"></div>
-
-
 <div class="whole-tables-page">
     <div class="main-body-tables">
         <h1 class="table-one-header">Course Schedule</h1>
-        <div>
-            <form>
-                <input type="text" id="search-table-one"><br>
-            </form>
+        <div class="table-filtering">
+            <details class="drop-down" id="drop-down-one">
+                <summary>Filter Class Type</summary>
+                <ul>
+                    <li><label><input type="checkbox" value="CS" />CS</label></li>
+                    <li><label><input type="checkbox" value="MATH" />MATH</label></li>
+                    <li><label><input type="checkbox" value="PHYS" />PHYS</label></li>
+                </ul>
+            </details>
+            <div>
+                <form>
+                    <input type="text" id="search-table-one" class="search-filter" placeholder="Search..."><br>
+                </form>
+            </div>
         </div>
-        <table class="table-one" id="table-one">
+        <table class="main-tables" id="table-one">
             <thead>
                 <tr>
                     <th scope="col" class="reverse-sorted">Course Number</th>
@@ -72,19 +79,36 @@
             </tbody>
         </table>
         <h1 class="table-one-header">Favorite Games</h1>
-        <div>
-            <form>
-                <input type="text" id="search-table-two"><br>
-            </form>
+        <div class="table-filtering">
+            <details class="drop-down" id="drop-down-two">
+                <summary>Filter Genre</summary>
+                <ul>
+                    <li><label><input type="checkbox" value="Action" />Action</label></li>
+                    <li><label><input type="checkbox" value="Adventure" />Adventure</label></li>
+                    <li><label><input type="checkbox" value="Strategy" />Strategy</label></li>
+                    <li><label><input type="checkbox" value="RPG" />RPG</label></li>
+                    <li><label><input type="checkbox" value="Open-World" />Open-World</label></li>
+                    <li><label><input type="checkbox" value="Shooter" />Shooter</label></li>
+                    <li><label><input type="checkbox" value="Indie" />Indie</label></li>
+                    <li><label><input type="checkbox" value="Puzzle" />Puzzle</label></li>
+                    <li><label><input type="checkbox" value="Platform" />Platform</label></li>
+                    <li><label><input type="checkbox" value="Simulation" />Simulation</label></li>
+                </ul>
+            </details>
+            <div>
+                <form>
+                    <input type="text" id="search-table-two" class="search-filter" placeholder="Search..."><br>
+                </form>
+            </div>
         </div>
-        <table class="table-one" id="table-two">
+        <table class="main-tables" id="table-two">
             <thead>
                 <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Genre</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Developer</th>
-                    <th scope="col">Release Date</th>
+                    <th scope="col" class="reverse-sorted">Name</th>
+                    <th scope="col" class="reverse-sorted">Genre</th>
+                    <th scope="col" class="reverse-sorted">Price</th>
+                    <th scope="col" class="reverse-sorted">Developer</th>
+                    <th scope="col" class="reverse-sorted">Release Date</th>
                 </tr>
             </thead>
             <tbody>
@@ -93,84 +117,84 @@
                     <td>Action, Adventure, RPG, Open-World</td>
                     <td>$59.99</td>
                     <td>Warhorse Studios</td>
-                    <td>February 4, 2025</td>
+                    <td>2025 Feb 4</td>
                 </tr>
                 <tr>
                     <td>Red Dead Redemption 2</td>
                     <td>Action, Adventure, Open-World</td>
                     <td>$59.99</td>
                     <td>Rockstar Games</td>
-                    <td>October 26, 2018</td>
+                    <td>2018 Oct 26</td>
                 </tr>
                 <tr>
                     <td>Baulder's Gate 3</td>
                     <td>Adventure, RPG, Strategy, Open-World</td>
                     <td>$59.99</td>
                     <td>Larian Studios</td>
-                    <td>Aug 3, 2023</td>
+                    <td>2023 Aug 3</td>
                 </tr>
                 <tr>
                     <td>Legend of Zelda: Tears of the Kingdom</td>
                     <td>Action, Adventure, Puzzle, Open-World</td>
                     <td>$69.99</td>
                     <td>Nintendo</td>
-                    <td>May 12, 2023</td>
+                    <td>2023 May 12</td>
                 </tr>
                 <tr>
                     <td>Stardew Valley</td>
                     <td>Indie, RPG, Simulation</td>
                     <td>$14.99</td>
                     <td>ConcernedApe</td>
-                    <td>Feb 26, 2016</td>
+                    <td>2016 Feb 26</td>
                 </tr>
                 <tr>
                     <td>Halo 3</td>
                     <td>Action, Shooter</td>
                     <td>$9.99</td>
                     <td>Bungie</td>
-                    <td>September 25, 2007</td>
+                    <td>2007 Sept 25</td>
                 </tr>
                 <tr>
                     <td>CyberPunk</td>
                     <td>Action, RPG, Open-World</td>
                     <td>$59.99</td>
                     <td>CD PROJEKT RED</td>
-                    <td>Dec 9, 2020</td>
+                    <td>2020 Dec 9</td>
                 </tr>
                 <tr>
                     <td>Disco Elysium - The Final Cut</td>
                     <td>RPG</td>
                     <td>$39.99</td>
                     <td>ZA/UM</td>
-                    <td>Oct 15, 2019</td>
+                    <td>2019 Oct 15</td>
                 </tr>
                 <tr>
                     <td>UnderTale</td>
                     <td>Indie, RPG</td>
                     <td>$9.99</td>
                     <td>tobyfox</td>
-                    <td>Sep 15, 2015</td>
+                    <td>2015 Sep 15</td>
                 </tr>
                 <tr>
                     <td>The Last of Us</td>
                     <td>Action, Adventure</td>
                     <td>$59.99</td>
                     <td>Naughty Dog</td>
-                    <td>June 14, 2013</td>
+                    <td>2013 June 14</td>
                 </tr>
                 <tr>
                     <td>Mario Odyssey</td>
                     <td>Action, Adventure, Platform</td>
                     <td>$59.99</td>
                     <td>Nintendo</td>
-                    <td>October 27, 2017</td>
+                    <td>2017 Oct 27</td>
                 </tr>
                 <tr>
                     <td>Eldin Ring</td>
                     <td>Action, RPG, Open-World</td>
                     <td>$59.99</td>
                     <td>FromSoftware</td>
-                    <td>Feb 24, 2022</td>
+                    <td>2022 Feb 24</td>
                 </tr>
             </tbody>
         </table>

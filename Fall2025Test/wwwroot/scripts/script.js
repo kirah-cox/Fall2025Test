@@ -149,3 +149,86 @@ window.site.registerHandler(function () {
         });
     });
 });
+
+
+window.site.registerHandler(function () {
+    $('#table-two th').off('click');
+    $('#table-two th').on('click', function () {
+        let table = $(this).closest('table');
+        let tbody = table.find('tbody');
+        let rows = tbody.find('tr').get();
+        let columnIndex = $(this).index();
+        let header = $(this).closest('#table-two th');
+
+        if ($(header).hasClass('reverse-sorted')) {
+            $(header).removeClass('reverse-sorted').addClass('sorted')
+            rows.sort(function (a, b) {
+                let aText = $(a).find('td').eq(columnIndex).text().toUpperCase();
+                let bText = $(b).find('td').eq(columnIndex).text().toUpperCase();
+                return aText.localeCompare(bText);
+            });
+        }
+        else if ($(header).hasClass('sorted')) {
+            $(header).removeClass('sorted').addClass('reverse-sorted')
+            rows.sort(function (a, b) {
+                let aText = $(a).find('td').eq(columnIndex).text().toUpperCase();
+                let bText = $(b).find('td').eq(columnIndex).text().toUpperCase();
+                return -aText.localeCompare(bText);
+            });
+        }
+
+        $.each(rows, function (index, row) {
+            tbody.append(row);
+        });
+    });
+});
+
+
+window.site.registerHandler(function () {
+    const checkboxes = $('#drop-down-one input[type="checkbox"]');
+    const rows = $('#table-one tbody tr');
+
+    function filterTable() {
+        const selectedCheckbox = checkboxes.filter(':checked').map(function () { return $(this).val().toUpperCase();}).get();
+
+        rows.each(function () {
+            const courseText = $(this).find('td:nth-child(1)').text().trim().toUpperCase();
+
+            if (selectedCheckbox.length === 0 || selectedCheckbox.some((word) => courseText.includes(word))) {
+                $(this).show();
+            }
+            else {
+                $(this).hide();
+            }
+        });
+    }
+
+    checkboxes.on('change', filterTable);
+
+    filterTable();
+});
+
+
+window.site.registerHandler(function () {
+    const checkboxes = $('#drop-down-two input[type="checkbox"]');
+    const rows = $('#table-two tbody tr');
+
+    function filterTable() {
+        const selectedCheckbox = checkboxes.filter(':checked').map(function () { return $(this).val().toUpperCase(); }).get();
+
+        rows.each(function () {
+            const courseText = $(this).find('td:nth-child(2)').text().trim().toUpperCase();
+
+            if (selectedCheckbox.length === 0 || selectedCheckbox.some((word) => courseText.includes(word))) {
+                $(this).show();
+            }
+            else {
+                $(this).hide();
+            }
+        });
+    }
+
+    checkboxes.on('change', filterTable);
+
+    filterTable();
+});
