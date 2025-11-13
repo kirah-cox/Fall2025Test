@@ -775,3 +775,108 @@ details > ul {
         color: #07203F;
         font-size: 1rem;
     }
+
+
+
+
+
+
+
+
+
+
+.whole-clone-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+.main-body-clone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 60%;
+    margin: auto;
+    flex: 1;
+}
+
+.clone-header {
+    height: 10rem;
+    width: 100%;
+    color: #0A3D62;
+    background-color: #F8F9FA;
+}
+
+.clone-nav {
+    height: 5rem;
+    width: 100%;
+    color: #F8F9FA;
+    background-color: #0A3D62;
+}
+
+.clone-main-page {
+    display: flex;
+    height: 100rem;
+    width: 100%;
+    background-color: #F8F9FA;
+}
+
+    .clone-main-page-left {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .clone-main-page-right {
+        width: 25%;
+    }
+
+.clone-top-picture{
+    background-color: red;
+    height: 15rem;
+    padding: 3rem;
+}
+
+.clone-top-header {
+    padding: 3rem;
+}
+
+.clone-top-text {
+    padding: 3rem;
+}
+
+.clone-middle-header {
+    background-color: #0A3D62;
+    padding: 3rem;
+}
+
+.clone-picture-row{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3rem;
+}
+
+    .clone-picture-row-picture-block{
+        background-color: red;
+        height: 10rem;
+        width: 10rem;
+    }
+
+.clone-bottom-header {
+    padding: 3rem;
+}
+
+.clone-bottom-text {
+    padding: 3rem;
+}
+
+.clone-newsletter {
+    padding: 3rem;
+}
+
+.clone-footer {
+    height: 10rem;
+    width: 100%;
+    background-color: #0A3D62;
+}
