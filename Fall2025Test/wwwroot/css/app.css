@@ -871,9 +871,52 @@ details > ul {
     padding: 3rem;
 }
 
-.clone-newsletter {
-    padding: 3rem;
+.clone-newsletter{
+    display: flex;
+    justify-content: space-evenly;
+    height: 15%;more stuff to the clone patge
+    width: 100%;
 }
+
+.clone-newsletter-right {
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+    .clone-email-text {
+        padding: 0.5rem;
+        width: 100%;
+        font-size: 1.25rem;
+    }
+
+    .clone-newsletter-bottom-button {
+        padding: 0.5rem;
+        width: 108%;
+        font-size: 1.25rem;
+    }
+
+.clone-newsletter-left {
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+    .clone-newsletter-text-form {
+        padding: 0.5rem;
+        width: 100%;
+        font-size: 1.25rem;
+    }
+
+    .clone-newsletter-bottom-text {
+        padding: 0.5rem;
+        width: 100%;
+        font-size: 1.25rem;
+    }
 
 .clone-footer {
     height: 10rem;
