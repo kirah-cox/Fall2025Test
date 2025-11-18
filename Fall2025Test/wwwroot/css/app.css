@@ -796,9 +796,10 @@ details > ul {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    width: 60%;
+    width: 40%;
     margin: auto;
     flex: 1;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .clone-header {
@@ -817,58 +818,79 @@ details > ul {
 
 .clone-main-page {
     display: flex;
-    height: 100rem;
     width: 100%;
     background-color: #F8F9FA;
 }
 
     .clone-main-page-left {
-        width: 75%;
+        width: 70%;
         display: flex;
+        height: 100%;
         flex-direction: column;
     }
 
     .clone-main-page-right {
-        width: 25%;
+        width: 30%;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
     }
 
 .clone-top-picture{
     background-color: red;
-    height: 15rem;
-    padding: 3rem;
+    height: 30rem;
 }
 
 .clone-top-header {
-    padding: 3rem;
+    padding-left: 3rem;
+    padding-top: 2rem;
+    font-size: 2.5rem;
+    font-weight: bolder;
 }
 
 .clone-top-text {
-    padding: 3rem;
+    padding-left: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-right: 3rem;
+    font-size: 1.15rem;
 }
 
 .clone-middle-header {
     background-color: #0A3D62;
-    padding: 3rem;
+    padding-left: 3rem;
+    height: 5rem;
+    color: #F8F9FA;
+    display: flex;
+    align-items: center;
+    font-size: 2.1rem;
+    font-weight: bold;
 }
 
-.clone-picture-row{
+.clone-picture-row {
     display: flex;
     justify-content: space-evenly;
-    padding: 3rem;
+    margin-top: 2rem;
 }
 
     .clone-picture-row-picture-block{
         background-color: red;
-        height: 10rem;
-        width: 10rem;
+        height: 13rem;
+        width: 13rem;
     }
 
 .clone-bottom-header {
-    padding: 3rem;
+    padding-left: 3rem;
+    padding-top: 2rem;
+    padding-right: 3rem;
+    font-size: 2.5rem;
+    font-weight: bolder;
 }
 
 .clone-bottom-text {
-    padding: 3rem;
+    padding-left: 3rem;
+    padding-top: 1rem;
+    font-size: 1.15rem;
 }
 
 .clone-newsletter{
@@ -894,7 +916,7 @@ details > ul {
 
     .clone-newsletter-bottom-button {
         padding: 0.5rem;
-        width: 108%;
+        width: 100%;
         font-size: 1.25rem;
     }
 
@@ -922,4 +944,105 @@ details > ul {
     height: 10rem;
     width: 100%;
     background-color: #0A3D62;
+}
+
+.clone-banners {
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    width: 85%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0A3D62;
+    border-bottom: none;
+    border-top: none;
+}
+
+.clone-individual-banners {
+    height: 25%;
+    background-color: #1A4F8B;
+    color: #F8F9FA;
+    display: flex;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: #31659e;
+    align-items: center;
+    justify-content: center;
+}
+
+.clone-bottom-banner {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e6e7e8;
+}
+
+.clone-banner-top-picture {
+    margin-top: 2rem;
+    height: 12rem;
+    background-color: red;
+}
+
+.clone-banner-heading {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 1.5rem;
+}
+
+.clone-banner-text {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.clone-banner-top-picture-with-text {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+    .clone-banner-top-picture-with-text-left {
+        background-color: red;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .clone-banner-top-picture-with-text-right {
+        margin-left: 1rem;
+    }
+
+.clone-banner-bottom-picture-with-text {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+    .clone-banner-bottom-picture-with-text-left {
+        background-color: red;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .clone-banner-bottom-picture-with-text-right{
+        margin-left: 1rem;
+    }
+
+.clone-banner-read-more {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    color: #1A4F8B;
+    font-weight: normal;
+}
+
+.clone-banner-bottom-picture {
+    margin-top: 2rem;
+    height: 17rem;
+    background-color: red;
 }
