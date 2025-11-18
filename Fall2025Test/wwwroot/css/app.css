@@ -796,7 +796,7 @@ details > ul {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    width: 40%;
+    width: 55%;
     margin: auto;
     flex: 1;
     font-family: 'Open Sans', sans-serif;
@@ -816,79 +816,82 @@ details > ul {
     background-color: #0A3D62;
 }
 
+.clone-top-picture-and-banner{
+    display: flex;
+    height: 30%;
+}
+
 .clone-main-page {
     display: flex;
     width: 100%;
     background-color: #F8F9FA;
+    padding-bottom: 3%;
 }
 
     .clone-main-page-left {
         width: 70%;
         display: flex;
-        height: 100%;
         flex-direction: column;
     }
 
     .clone-main-page-right {
         width: 30%;
         display: flex;
-        height: 100%;
         flex-direction: column;
     }
 
 .clone-top-picture{
-    background-color: red;
-    height: 30rem;
+    width: 70%;
+    object-fit: cover;
 }
 
 .clone-top-header {
-    padding-left: 3rem;
+    padding-left: 5%;
+    padding-right: 5%;
     padding-top: 2rem;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: bolder;
 }
 
 .clone-top-text {
-    padding-left: 3rem;
+    padding-left: 5%;
     padding-top: 1rem;
     padding-bottom: 2rem;
-    padding-right: 3rem;
+    padding-right: 5%;
     font-size: 1.15rem;
 }
 
 .clone-middle-header {
     background-color: #0A3D62;
-    padding-left: 3rem;
-    height: 5rem;
+    padding-left: 5%;
+    height: 4rem;
     color: #F8F9FA;
     display: flex;
     align-items: center;
-    font-size: 2.1rem;
+    font-size: 1.9rem;
     font-weight: bold;
 }
 
 .clone-picture-row {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 2rem;
+    margin-top: 3%;
 }
 
     .clone-picture-row-picture-block{
-        background-color: red;
-        height: 13rem;
-        width: 13rem;
+        width: 30%;
     }
 
 .clone-bottom-header {
-    padding-left: 3rem;
+    padding-left: 5%;
     padding-top: 2rem;
-    padding-right: 3rem;
-    font-size: 2.5rem;
+    padding-right: 5%;
+    font-size: 2.3rem;
     font-weight: bolder;
 }
 
 .clone-bottom-text {
-    padding-left: 3rem;
+    padding-left: 5%;
     padding-top: 1rem;
     font-size: 1.15rem;
 }
@@ -901,7 +904,8 @@ details > ul {
 }
 
 .clone-newsletter-right {
-    margin: 3rem;
+    margin: 5%;
+    margin-bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -921,7 +925,8 @@ details > ul {
     }
 
 .clone-newsletter-left {
-    margin: 3rem;
+    margin: 5%;
+    margin-bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -949,66 +954,74 @@ details > ul {
 .clone-banners {
     display: flex;
     flex-direction: column;
-    height: 30rem;
-    width: 85%;
+    width: 30%;
     border-style: solid;
     border-width: 1px;
     border-color: #0A3D62;
     border-bottom: none;
     border-top: none;
+    border-right: none;
+    font-size: 1.3rem;
+    background-color: #F8F9FA;
 }
 
 .clone-individual-banners {
     height: 25%;
+    width: 85%;
     background-color: #1A4F8B;
     color: #F8F9FA;
     display: flex;
     border-top-style: solid;
     border-top-width: 2px;
     border-top-color: #31659e;
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-right-color: #0A3D62;
     align-items: center;
     justify-content: center;
 }
 
 .clone-bottom-banner {
     display: flex;
-    flex-direction: column;
+    height: 100%;
     width: 85%;
+    flex-direction: column;
+    justify-content: flex-end;
     border-style: solid;
     border-width: 1px;
     border-color: #e6e7e8;
 }
 
 .clone-banner-top-picture {
-    margin-top: 2rem;
-    height: 12rem;
-    background-color: red;
+    margin-top: 7%;
+    height: auto;
 }
 
 .clone-banner-heading {
-    margin-top: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    font-size: 1.5rem;
+    margin-top: 7%;
+    margin-left: 7%;
+    margin-right: 7%;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .clone-banner-text {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-top: 2%;
+    margin-left: 7%;
+    margin-right: 7%;
+    font-size: 0.9rem;
 }
 
 .clone-banner-top-picture-with-text {
-    margin-top: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-top: 7%;
+    margin-left: 7%;
+    margin-right: 7%;
     display: flex;
     justify-content: flex-start;
 }
 
     .clone-banner-top-picture-with-text-left {
-        background-color: red;
-        height: 5rem;
-        width: 5rem;
+        width: 40%;
     }
 
     .clone-banner-top-picture-with-text-right {
@@ -1016,17 +1029,15 @@ details > ul {
     }
 
 .clone-banner-bottom-picture-with-text {
-    margin-top: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-top: 7%;
+    margin-left: 7%;
+    margin-right: 7%;
     display: flex;
     justify-content: flex-start;
 }
 
     .clone-banner-bottom-picture-with-text-left {
-        background-color: red;
-        height: 5rem;
-        width: 5rem;
+        width: 40%;
     }
 
     .clone-banner-bottom-picture-with-text-right{
@@ -1034,15 +1045,15 @@ details > ul {
     }
 
 .clone-banner-read-more {
-    margin-top: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-top: 7%;
+    margin-left: 7%;
+    margin-right: 7%;
     color: #1A4F8B;
     font-weight: normal;
+    font-size: 1.5rem;
 }
 
 .clone-banner-bottom-picture {
-    margin-top: 2rem;
-    height: 17rem;
-    background-color: red;
+    margin-top: 7%;
+    height: auto;
 }
