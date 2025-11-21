@@ -232,3 +232,60 @@ window.site.registerHandler(function () {
 
     filterTable();
 });
+
+
+window.site.registerHandler(function () {
+    $('#fetchBtn').off('click');
+    $('#fetchBtn').on('click', function () {
+        const pokemonName = $('#pokemonName').val().toLowerCase();
+        if (pokemonName) {
+            $.ajax({
+                url: `https://pokeapi.co/api/v2/pokemon/${pokemonName}`,
+                method: 'GET',
+                success: function (response) {
+
+                    let abilitiesHtml = '';
+                    $.each(response.abilities, function (indexOrKey, value) {
+                        const abilityName = value.ability.name;
+
+                        if (indexOrKey === (response.abilities.length - 1)) {
+                            abilitiesHtml += ` ${abilityName}`;
+                        }
+                        else {
+                            abilitiesHtml += ` ${abilityName},`;
+                        }
+                    });
+
+                    let typesHtml = '';
+                    $.each(response.types, function (indexOrKey, value) {
+                        const typeName = value.type.name;
+
+                        if (indexOrKey === (response.types.length - 1)) {
+                            typesHtml += ` ${typeName}`;
+                        }
+                        else {
+                            typesHtml += ` ${typeName},`;
+                        }
+                    });
+
+                    const pokemonData = `
+                        <h3>${response.name.toUpperCase()}</h3>
+                        <img src='${response.sprites.front_default}' alt='${response.name}'
+                        <p></p>
+                        <p>Height: ${response.height / 10} m</p>
+                        <p>Weight: ${response.weight / 10} kg</p>
+                        <p>Types: ${typesHtml}</p>
+                        <p>Abilities: ${abilitiesHtml}</p>
+                    `;
+
+                    $('#pokemonInfo').html(pokemonData);
+                },
+                error: function () {
+                    $('#pokemonInfo').html('<p>Pokemon not found. Please try again.</p>');
+                }
+            });
+        } else {
+            $('#pokemonInfo').html('<p>Please enter a Pokemon name or ID.</p>');
+        }
+    });
+});

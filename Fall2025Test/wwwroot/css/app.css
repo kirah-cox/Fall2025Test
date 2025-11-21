@@ -789,6 +789,41 @@ details > ul {
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
+        background-image:
+        radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
+        radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
+        radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
+        radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
+        radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
+        radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
+        radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(to top, #07203F, #02000D);
+
+    background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+                        repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, no-repeat;
+
+    background-size: 125px 125px, 225px 225px, 325px 325px, 150px 150px, 250px 250px,
+                        350px 350px, 425px 425px, 225px 225px, 325px 325px, 150px 150px,
+                        150px 150px, 250px 250px, 350px 350px, 175px 175px, 275px 275px,
+                        375px 375px, 225px 225px, 250px 250px, 350px 350px, 175px 175px, auto;
+
+    background-position: 33px 100px, 15px 25px, 40px 15px, 9px 5px, 25px 3px,
+                            50px 35px, 57px 47px, 5px 24px, 38px 45px, 95px 63px,
+                            8px 41px, 72px 29px, 79px 50px, 65px 17px, 10px 70px,
+                            0px 63px, 61px 0px, 69px 84px, 18px 89px, 83px 37px, 0 0;
 }
 
 .main-body-clone {
@@ -798,36 +833,58 @@ details > ul {
     align-content: center;
     width: 55%;
     margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     flex: 1;
     font-family: 'Open Sans', sans-serif;
 }
 
 .clone-header {
-    height: 10rem;
+    height: 8rem;
     max-width: 100%;
     color: #0A3D62;
     background-color: #F8F9FA;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
     .clone-header-title {
-        font-size: 3.5rem;
-        padding-left: 5%;
-        margin-right: 28%;
+        font-size: 3rem;
         font-weight: bolder;
     }
 
-    .clone-header-search {
-        padding: 5%;
-        width: 110%;
-        font-size: 1.25rem;
-        border-radius: 4px;
-        border-width: 1px;
+    .clone-header-whole-search-bar{
+        display: flex;
     }
 
-        .clone-header-search::placeholder {
-            font-family: 'Open Sans', sans-serif;
+        .clone-header-search {
+            height: 3.5rem;
+            width: 17rem;
+            font-size: 1.4rem;
+            border: 1px solid #bbbcbd;
+            border-right: none;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            background-color: #F8F9FA;
+            outline: none;
+        }
+
+            .clone-header-search::placeholder {
+                font-family: 'Open Sans', sans-serif;
+                padding-left: 3%;
+                color: #222222;
+            }
+
+        .clone-header-magnifying-glass {
+            border: 1px solid #bbbcbd;
+            border-left: none;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            display: flex;
+            align-items: center;
         }
 
 .clone-nav {
@@ -894,7 +951,9 @@ details > ul {
 .clone-middle-header {
     background-color: #0A3D62;
     padding-left: 5%;
-    height: 4rem;
+    padding-right: 5%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
     color: #F8F9FA;
     display: flex;
     align-items: center;
@@ -929,65 +988,85 @@ details > ul {
 .clone-newsletter{
     display: flex;
     justify-content: space-evenly;
-    height: 15%;
+    height: 100%;
     width: 100%;
+    margin-top: 4%;
 }
 
 .clone-newsletter-right {
-    margin: 5%;
-    margin-bottom: 0;
+    margin-left: 2%;
+    margin-right: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 100%;
 }
 
     .clone-email-text {
-        padding: 0.5rem;
+        height: 3.5rem;
         width: 100%;
-        font-size: 1.25rem;
+        font-size: 1.4rem;
+        border-radius: 5px;
+        border: 1px solid #bbbcbd;
+        background-color: #F8F9FA;
+        outline: none;
     }
 
         .clone-email-text::placeholder {
             font-family: 'Open Sans', sans-serif;
+            padding-left: 3%;
+            color: #222222;
         }
 
     .clone-newsletter-bottom-button {
-        padding: 0.5rem;
+        height: 3.5rem;
         width: 100%;
         font-size: 1.25rem;
+        border-radius: 5px;
+        border: none;
+        font-family: 'Open Sans', sans-serif;
+        background-color: #E74C3C;
+        color: #F8F9FA;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-top: 2%;
     }
 
 .clone-newsletter-left {
-    margin: 5%;
-    margin-bottom: 0;
+    margin-left: 5%;
+    margin-right: 2%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 100%;
 }
 
     .clone-newsletter-text-form {
-        padding: 0.5rem;
-        width: 90%;
-        font-size: 1.25rem;
+        height: 3.5rem;
+        width: 100%;
+        font-size: 1.4rem;
+        border-radius: 5px;
+        border: 1px solid #bbbcbd;
+        background-color: #F8F9FA;
+        outline: none;
     }
 
         .clone-newsletter-text-form::placeholder {
             font-family: 'Open Sans', sans-serif;
+            padding-left: 3%;
+            color: #222222;
         }
 
     .clone-newsletter-bottom-text {
-        padding: 0.5rem;
-        width: 90%;
-        font-size: 1.25rem;
+        height: 3.5rem;
+        width: 100%;
+        font-size: 1.4rem;
+        color: #0A3D62;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        margin-top: 2%;
     }
-
-.clone-footer {
-    height: 10rem;
-    width: 100%;
-    background-color: #0A3D62;
-}
 
 .clone-banners {
     display: flex;
@@ -1028,16 +1107,16 @@ details > ul {
     justify-content: flex-end;
     border-style: solid;
     border-width: 1px;
-    border-color: #e6e7e8;
+    border-color: #dbdbdb;
 }
 
 .clone-banner-top-picture {
-    margin-top: 7%;
+    margin-top: 12%;
     height: auto;
 }
 
 .clone-banner-heading {
-    margin-top: 7%;
+    margin-top: 9%;
     margin-left: 7%;
     margin-right: 7%;
     font-size: 1rem;
@@ -1052,7 +1131,7 @@ details > ul {
 }
 
 .clone-banner-top-picture-with-text {
-    margin-top: 7%;
+    margin-top: 12%;
     margin-left: 7%;
     margin-right: 7%;
     display: flex;
@@ -1060,15 +1139,18 @@ details > ul {
 }
 
     .clone-banner-top-picture-with-text-left {
-        width: 40%;
+        width: 35%;
     }
 
     .clone-banner-top-picture-with-text-right {
         margin-left: 1rem;
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
     }
 
 .clone-banner-bottom-picture-with-text {
-    margin-top: 7%;
+    margin-top: 12%;
     margin-left: 7%;
     margin-right: 7%;
     display: flex;
@@ -1076,24 +1158,175 @@ details > ul {
 }
 
     .clone-banner-bottom-picture-with-text-left {
-        width: 40%;
+        width: 35%;
     }
 
-    .clone-banner-bottom-picture-with-text-right{
+    .clone-banner-bottom-picture-with-text-right {
         margin-left: 1rem;
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
     }
 
 .clone-banner-read-more {
-    margin-top: 7%;
+    margin-top: 9%;
     margin-left: 7%;
     margin-right: 7%;
-    color: #1A4F8B;
+    color: #0A3D62;
     font-weight: normal;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
 .clone-banner-bottom-picture {
-    margin-top: 7%;
+    margin-top: 12%;
     height: auto;
 }
+
+.clone-footer {
+    height: 7rem;
+    width: 100%;
+    background-color: #0A3D62;
+    display: flex;
+    align-items: center;
+}
+
+    .clone-footer div{
+        padding-left: 1.5%;
+        padding-right: 1.5%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+.whole-API-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
+        radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
+        radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
+        radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
+        radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
+        radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
+        radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
+        radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(to top, #07203F, #02000D);
+
+    background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+                        repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, no-repeat;
+
+    background-size: 125px 125px, 225px 225px, 325px 325px, 150px 150px, 250px 250px,
+                        350px 350px, 425px 425px, 225px 225px, 325px 325px, 150px 150px,
+                        150px 150px, 250px 250px, 350px 350px, 175px 175px, 275px 275px,
+                        375px 375px, 225px 225px, 250px 250px, 350px 350px, 175px 175px, auto;
+
+    background-position: 33px 100px, 15px 25px, 40px 15px, 9px 5px, 25px 3px,
+                            50px 35px, 57px 47px, 5px 24px, 38px 45px, 95px 63px,
+                            8px 41px, 72px 29px, 79px 50px, 65px 17px, 10px 70px,
+                            0px 63px, 61px 0px, 69px 84px, 18px 89px, 83px 37px, 0 0;
+}
+
+.main-body-API {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.API-body-row{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.API-body-row-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.API-header {
+    font-size: 4rem;
+    font-weight: 100;
+    color: #F1F0EF;
+}
+
+.API-pokemon {
+    background-color: #F1F0EF;
+    color: #07203F;
+    width: 100%;
+    height: 60%;
+    padding: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.API-map {
+    border-radius: 15px;
+    width: 50%;
+    height: 40rem;
+}
+
+.pokemon-header {
+    font-size: 2.5rem;
+}
+
+.fetch-pokemon-button {
+    display: inline-block;
+    background-color: #07203F;
+    width: 100%;
+    color: #F1F0EF;
+    padding: 1rem;
+    border-radius: 15px;
+    font-family: 'Tinos', serif;
+    font-weight: 100;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.5);
+    margin: 3%;
+    text-align: center;
+}
+
+    .fetch-pokemon-button:hover {
+        background-color: #1a385d;
+        transform: translateY(-5px);
+    }
+
+.search-pokemon {
+    margin: 3%;
+    width: 100%;
+    height: 2rem;
+}
+
+    .search-pokemon::placeholder {
+        font-family: 'Tinos', serif;
+        color: #07203F;
+        font-size: 1.25rem;
+        padding-left: 2%;
+    }
