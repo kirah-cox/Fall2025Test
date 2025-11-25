@@ -442,3 +442,34 @@ window.site.registerHandler(function () {
     });
 });
 
+
+window.site.registerHandler(function () {
+    $('#exit-modal-top').off('click');
+    $('#exit-modal-top').on('click', function () {
+        $('#modal-top').removeClass('edit-table-modal-visible-top').addClass('edit-table-modal-hidden-top');
+    });
+});
+
+
+window.site.registerHandler(function () {
+    $('#exit-modal-bottom').off('click');
+    $('#exit-modal-bottom').on('click', function () {
+        $('#modal-bottom').removeClass('edit-table-modal-visible-bottom').addClass('edit-table-modal-hidden-bottom');
+    });
+});
+
+
+window.site.registerHandler(function () {
+    $('#exit-modal-top-edit').off('click');
+    $('#exit-modal-top-edit').on('click', function () {
+        $('#modal-top-edit').removeClass('edit-table-modal-visible-top').addClass('edit-table-modal-hidden-top');
+    });
+});
+
+
+window.site.registerHandler(function () {
+    $('#exit-modal-bottom-edit').off('click');
+    $('#exit-modal-bottom-edit').on('click', function () {
+        $('#modal-bottom-edit').removeClass('edit-table-modal-visible-bottom').addClass('edit-table-modal-hidden-bottom');
+    });
+});

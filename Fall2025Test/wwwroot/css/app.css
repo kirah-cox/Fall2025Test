@@ -8,7 +8,7 @@ html, body {
 }
 
 body {
-    background-color: #F1F0EF;
+    background-color: #02000D;
     color: #02000D;
 }
 
@@ -805,12 +805,26 @@ code {
         border-radius: 15px;
     }
 
-    .top-table-row-form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
+.modal-title-and-exit{
+    display: flex;
+}
+
+.exit-modal {
+    position: absolute;
+    z-index: 9999;
+    border: none;
+    cursor: pointer;
+    left: 85%;
+    height: 10%;
+    width: 10%;
+}
+
+.top-table-row-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
     .top-table-row-form-edit {
         display: flex;
@@ -907,7 +921,6 @@ code {
         color: #F1F0EF;
         padding: 5%;
         margin-right: 5%;
-        margin-left: 10%;
         font-family: 'Tinos', serif;
         font-size: 1rem;
         border: none;
