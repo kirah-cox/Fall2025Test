@@ -289,3 +289,156 @@ window.site.registerHandler(function () {
         }
     });
 });
+
+
+window.site.registerHandler(function () {
+    $(document).ready(function () {
+        $('#top-table-row-form').submit(function (event) {
+            event.preventDefault();
+
+            let courseNumber = $('#course-number').val();
+            let courseName = $('#course-name').val();
+            let time = $('#time').val();
+            let teacher = $('#teacher').val();
+            let credits = $('#credits').val();
+
+            if (courseNumber.trim() != '' && courseName.trim() != '' && time.trim() != '' && teacher.trim() != '' && credits.trim() != '') {
+                let newRow = `<tr>
+                            <td>${courseNumber}</td>
+                            <td>${courseName}</td>
+                            <td>${time}</td>
+                            <td>${teacher}</td>
+                            <td>${credits}</td>
+                            <td><button class="delete-btn">Delete</button><button class="edit-btn">Edit</button></td>
+                          </tr>`;
+                $('#table-one tbody').append(newRow);
+            }
+
+            $('#top-table-row-form')[0].reset();
+            $('#modal-top').removeClass('edit-table-modal-visible-top').addClass('edit-table-modal-hidden-top');
+        });
+
+        $(document).on('click', '.delete-btn', function () {
+            $(this).closest('tr').remove();
+        });
+    });
+});
+
+
+window.site.registerHandler(function () {
+    $('#add-new-course-top').off('click');
+    $('#add-new-course-top').on('click', function () {
+        $('#modal-top').removeClass('edit-table-modal-hidden-top').addClass('edit-table-modal-visible-top');
+    });
+});
+
+
+window.site.registerHandler(function () {
+    $(document).ready(function () {
+        $('#bottom-table-row-form').submit(function (event) {
+            event.preventDefault();
+
+            let gameName = $('#game-name').val();
+            let genre = $('#genre').val();
+            let price = $('#price').val();
+            let developer = $('#developer').val();
+            let releaseDate = $('#release-date').val();
+
+            if (gameName.trim() != '' && genre.trim() != '' && price.trim() != '' && developer.trim() != '' && releaseDate.trim() != '') {
+                let newRow = `<tr>
+                            <td>${gameName}</td>
+                            <td>${genre}</td>
+                            <td>${price}</td>
+                            <td>${developer}</td>
+                            <td>${releaseDate}</td>
+                            <td><button class="delete-btn">Delete</button><button class="edit-btn">Edit</button></td>
+                          </tr>`;
+                $('#table-two tbody').append(newRow);
+            }
+
+            $('#bottom-table-row-form')[0].reset();
+            $('#modal-bottom').removeClass('edit-table-modal-visible-bottom').addClass('edit-table-modal-hidden-bottom');
+        });
+
+        $(document).on('click', '.delete-btn', function () {
+            $(this).closest('tr').remove();
+        });
+    });
+});
+
+
+window.site.registerHandler(function () {
+    $('#add-new-course-bottom').off('click');
+    $('#add-new-course-bottom').on('click', function () {
+        $('#modal-bottom').removeClass('edit-table-modal-hidden-bottom').addClass('edit-table-modal-visible-bottom');
+    });
+});
+
+
+window.site.registerHandler(function () {
+    $(document).on('click', '.edit-btn-top', function () {
+        let tableRow = $(this).closest('tr');
+        $('#modal-top-edit').removeClass('edit-table-modal-hidden-top').addClass('edit-table-modal-visible-top');
+        $('#top-table-row-form-edit').off('submit');
+        $('#top-table-row-form-edit').on('submit', function (event) {
+            event.preventDefault();
+
+            let courseNumber = $('#course-number-edit').val();
+            let courseName = $('#course-name-edit').val();
+            let time = $('#time-edit').val();
+            let teacher = $('#teacher-edit').val();
+            let credits = $('#credits-edit').val();
+
+            if (courseNumber.trim() != '' && courseName.trim() != '' && time.trim() != '' && teacher.trim() != '' && credits.trim() != '') {
+                let newRow = `<tr>
+                            <td>${courseNumber}</td>
+                            <td>${courseName}</td>
+                            <td>${time}</td>
+                            <td>${teacher}</td>
+                            <td>${credits}</td>
+                            <td><button class="delete-btn">Delete</button><button class="edit-btn-top">Edit</button></td>
+                          </tr>`;
+                tableRow.replaceWith(newRow);
+            }
+
+            this.reset();
+            $('#top-table-row-form-edit')[0].reset();
+            $('#modal-top-edit').removeClass('edit-table-modal-visible-top').addClass('edit-table-modal-hidden-top');
+        });
+    });
+});
+
+
+window.site.registerHandler(function () {
+    $(document).on('click', '.edit-btn-bottom', function () {
+        let tableRow = $(this).closest('tr');
+        $('#modal-bottom-edit').removeClass('edit-table-modal-hidden-bottom').addClass('edit-table-modal-visible-bottom');
+        $('#bottom-table-row-form-edit').off('submit');
+        $('#bottom-table-row-form-edit').on('submit', function (event) {
+            event.preventDefault();
+
+            let gameName = $('#game-name-edit').val();
+            let genre = $('#genre-edit').val();
+            let price = $('#price-edit').val();
+            let developer = $('#developer-edit').val();
+            let releaseDate = $('#release-date-edit').val();
+
+            if (gameName.trim() != '' && genre.trim() != '' && price.trim() != '' && developer.trim() != '' && releaseDate.trim() != '') {
+                let newRow = `<tr>
+                            <td>${gameName}</td>
+                            <td>${genre}</td>
+                            <td>${price}</td>
+                            <td>${developer}</td>
+                            <td>${releaseDate}</td>
+                            <td><button class="delete-btn">Delete</button><button class="edit-btn-bottom">Edit</button></td>
+                          </tr>`;
+                tableRow.replaceWith(newRow);
+            }
+
+            this.reset();
+            $('#bottom-table-row-form-edit')[0].reset();
+            $('#modal-bottom-edit').removeClass('edit-table-modal-visible-bottom').addClass('edit-table-modal-hidden-bottom');
+        });
+    });
+});
+

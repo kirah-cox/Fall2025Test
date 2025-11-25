@@ -5,6 +5,62 @@
     <PageTitle>Tables</PageTitle>
 </head>
 
+<div class="edit-table-modal-container-top">
+    <div id="modal-top" class="edit-table-modal-hidden-top">
+        <h1>Add Class</h1>
+        <form id="top-table-row-form" class="top-table-row-form">
+            <input class="top-table-row-text-form" type="text" id="course-number" placeholder="Course Number" required>
+            <input class="top-table-row-text-form" type="text" id="course-name" placeholder="Course Name" required>
+            <input class="top-table-row-text-form" type="text" id="time" placeholder="Time" required>
+            <input class="top-table-row-text-form" type="text" id="teacher" placeholder="Teacher" required>
+            <input class="top-table-row-text-form" type="text" id="credits" placeholder="Credits" required>
+            <button type="submit" id="add-class-row" class="add-class-button">Add Class</button>
+        </form>
+    </div>
+</div>
+
+<div class="edit-table-modal-container-bottom">
+    <div id="modal-bottom" class="edit-table-modal-hidden-bottom">
+        <h1>Add Class</h1>
+        <form id="bottom-table-row-form" class="bottom-table-row-form">
+            <input class="bottom-table-row-text-form" type="text" id="game-name" placeholder="Game Name" required>
+            <input class="bottom-table-row-text-form" type="text" id="genre" placeholder="Genre" required>
+            <input class="bottom-table-row-text-form" type="text" id="price" placeholder="Price" required>
+            <input class="bottom-table-row-text-form" type="text" id="developer" placeholder="Developer" required>
+            <input class="bottom-table-row-text-form" type="text" id="release-date" placeholder="Release Date" required>
+            <button type="submit" id="add-class-row" class="add-class-button">Add Class</button>
+        </form>
+    </div>
+</div>
+
+<div class="edit-table-modal-container-top">
+    <div id="modal-top-edit" class="edit-table-modal-hidden-top">
+        <h1>Edit Class</h1>
+        <form id="top-table-row-form-edit" class="top-table-row-form-edit">
+            <input class="top-table-row-text-form" type="text" id="course-number-edit" placeholder="Course Number" required>
+            <input class="top-table-row-text-form" type="text" id="course-name-edit" placeholder="Course Name" required>
+            <input class="top-table-row-text-form" type="text" id="time-edit" placeholder="Time" required>
+            <input class="top-table-row-text-form" type="text" id="teacher-edit" placeholder="Teacher" required>
+            <input class="top-table-row-text-form" type="text" id="credits-edit" placeholder="Credits" required>
+            <button type="submit" id="edit-class-row" class="add-class-button">Edit Class</button>
+        </form>
+    </div>
+</div>
+
+<div class="edit-table-modal-container-bottom">
+    <div id="modal-bottom-edit" class="edit-table-modal-hidden-bottom">
+        <h1>Edit Class</h1>
+        <form id="bottom-table-row-form-edit" class="bottom-table-row-form-edit">
+            <input class="bottom-table-row-text-form" type="text" id="game-name-edit" placeholder="Game Name" required>
+            <input class="bottom-table-row-text-form" type="text" id="genre-edit" placeholder="Genre" required>
+            <input class="bottom-table-row-text-form" type="text" id="price-edit" placeholder="Price" required>
+            <input class="bottom-table-row-text-form" type="text" id="developer-edit" placeholder="Developer" required>
+            <input class="bottom-table-row-text-form" type="text" id="release-date-edit" placeholder="Release Date" required>
+            <button type="submit" id="edit-class-row" class="add-class-button">Edit Class</button>
+        </form>
+    </div>
+</div>
+
 <div class="whole-tables-page">
     <div class="main-body-tables">
         <h1 class="table-one-header">Course Schedule</h1>
@@ -17,11 +73,10 @@
                     <li><label><input type="checkbox" value="PHYS" />PHYS</label></li>
                 </ul>
             </details>
-            <div>
-                <form>
-                    <input type="text" id="search-table-one" class="search-filter" placeholder="Search..."><br>
-                </form>
-            </div>
+            <form class="search-filter-form">
+                <input type="text" id="search-table-one" class="search-filter" placeholder="Search..."><br>
+            </form>
+            <button id="add-new-course-top" class="add-new-course-button">Add New Course</button>
         </div>
         <table class="main-tables" id="table-one">
             <thead>
@@ -31,6 +86,7 @@
                     <th scope="col" class="reverse-sorted">Time</th>
                     <th scope="col" class="reverse-sorted">Teacher</th>
                     <th scope="col" class="reverse-sorted">Credits</th>
+                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -40,6 +96,7 @@
                     <td>MWF 8:30 am-9:20 am</td>
                     <td>Teichert, Adam</td>
                     <td>3</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-top">Edit</button></td>
                 </tr>
                 <tr>
                     <td>CS 2810</td>
@@ -47,6 +104,7 @@
                     <td>MWF 9:30 am-10:20 am</td>
                     <td>Simper, Dallan</td>
                     <td>3</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-top">Edit</button></td>
                 </tr>
                 <tr>
                     <td>CS 1810</td>
@@ -54,6 +112,7 @@
                     <td>TTH 11:00 am-12:15 pm</td>
                     <td>Jensen, Craig C.</td>
                     <td>3</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-top">Edit</button></td>
                 </tr>
                 <tr>
                     <td>MATH 2210</td>
@@ -61,6 +120,7 @@
                     <td>MWF 10:30 am-11:20 am</td>
                     <td>Tyler, Jonathan G.</td>
                     <td>3</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-top">Edit</button></td>
                 </tr>
                 <tr>
                     <td>PHYS 2210</td>
@@ -68,6 +128,7 @@
                     <td>MTWF 1:30 pm-2:20 pm</td>
                     <td>Smith, Larry</td>
                     <td>4</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-top">Edit</button></td>
                 </tr>
                 <tr>
                     <td>PHYS 2215</td>
@@ -75,6 +136,7 @@
                     <td>TH 1:30 pm-4:20 pm</td>
                     <td>Smith, Larry</td>
                     <td>1</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-top">Edit</button></td>
                 </tr>
             </tbody>
         </table>
@@ -95,11 +157,10 @@
                     <li><label><input type="checkbox" value="Simulation" />Simulation</label></li>
                 </ul>
             </details>
-            <div>
-                <form>
-                    <input type="text" id="search-table-two" class="search-filter" placeholder="Search..."><br>
-                </form>
-            </div>
+            <form class="search-filter-form">
+                <input type="text" id="search-table-two" class="search-filter" placeholder="Search..."><br>
+            </form>
+            <button id="add-new-course-bottom" class="add-new-course-button">Add New Course</button>
         </div>
         <table class="main-tables" id="table-two">
             <thead>
@@ -109,6 +170,7 @@
                     <th scope="col" class="reverse-sorted">Price</th>
                     <th scope="col" class="reverse-sorted">Developer</th>
                     <th scope="col" class="reverse-sorted">Release Date</th>
+                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -118,6 +180,7 @@
                     <td>$59.99</td>
                     <td>Warhorse Studios</td>
                     <td>2025 Feb 4</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-bottom">Edit</button></td>
                 </tr>
                 <tr>
                     <td>Red Dead Redemption 2</td>
@@ -125,6 +188,7 @@
                     <td>$59.99</td>
                     <td>Rockstar Games</td>
                     <td>2018 Oct 26</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-bottom">Edit</button></td>
                 </tr>
                 <tr>
                     <td>Baulder's Gate 3</td>
@@ -132,6 +196,7 @@
                     <td>$59.99</td>
                     <td>Larian Studios</td>
                     <td>2023 Aug 3</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-bottom">Edit</button></td>
                 </tr>
                 <tr>
                     <td>Legend of Zelda: Tears of the Kingdom</td>
@@ -139,6 +204,7 @@
                     <td>$69.99</td>
                     <td>Nintendo</td>
                     <td>2023 May 12</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-bottom">Edit</button></td>
                 </tr>
                 <tr>
                     <td>Stardew Valley</td>
@@ -146,6 +212,7 @@
                     <td>$14.99</td>
                     <td>ConcernedApe</td>
                     <td>2016 Feb 26</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-bottom">Edit</button></td>
                 </tr>
                 <tr>
                     <td>Halo 3</td>
@@ -153,6 +220,7 @@
                     <td>$9.99</td>
                     <td>Bungie</td>
                     <td>2007 Sept 25</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-bottom">Edit</button></td>
                 </tr>
                 <tr>
                     <td>CyberPunk</td>
@@ -160,6 +228,7 @@
                     <td>$59.99</td>
                     <td>CD PROJEKT RED</td>
                     <td>2020 Dec 9</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-bottom">Edit</button></td>
                 </tr>
                 <tr>
                     <td>Disco Elysium - The Final Cut</td>
@@ -167,6 +236,7 @@
                     <td>$39.99</td>
                     <td>ZA/UM</td>
                     <td>2019 Oct 15</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-bottom">Edit</button></td>
                 </tr>
                 <tr>
                     <td>UnderTale</td>
@@ -174,6 +244,7 @@
                     <td>$9.99</td>
                     <td>tobyfox</td>
                     <td>2015 Sep 15</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-bottom">Edit</button></td>
                 </tr>
                 <tr>
                     <td>The Last of Us</td>
@@ -181,6 +252,7 @@
                     <td>$59.99</td>
                     <td>Naughty Dog</td>
                     <td>2013 June 14</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-bottom">Edit</button></td>
                 </tr>
                 <tr>
                     <td>Mario Odyssey</td>
@@ -188,6 +260,7 @@
                     <td>$59.99</td>
                     <td>Nintendo</td>
                     <td>2017 Oct 27</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-bottom">Edit</button></td>
                 </tr>
                 <tr>
                     <td>Eldin Ring</td>
@@ -195,6 +268,7 @@
                     <td>$59.99</td>
                     <td>FromSoftware</td>
                     <td>2022 Feb 24</td>
+                    <td><button class="delete-btn">Delete</button><button class="edit-btn-bottom">Edit</button></td>
                 </tr>
             </tbody>
         </table>
