@@ -352,8 +352,9 @@ code {
     font-size: 1.2rem;
 }
 
-.footer-name{
+.footer-name {
     font-size: 2rem;
+    white-space: nowrap;
 }
 
 .social-media-logos {
@@ -469,6 +470,7 @@ code {
         color: #F1F0EF;
         flex: 1;
         margin: auto;
+        width: 90%;
     }
 
     .main-body-top {
@@ -479,10 +481,11 @@ code {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        width: 100%;
     }
 
         .main-body-top-left div {
-            width: 45rem;
+            width: 100%;
         }
 
     main-body-top-line-class {
@@ -502,7 +505,7 @@ code {
         margin: 0;
         margin-top: 0.6rem;
         height: 0.15rem;
-        width: 45rem;
+        width: 100%;
         background-color: #F1F0EF;
     }
 
@@ -510,7 +513,7 @@ code {
         margin: 0;
         margin-top: 0.6rem;
         height: 0.15rem;
-        width: 45rem;
+        width: 100%;
         background-color: #F1F0EF;
     }
 
@@ -524,12 +527,17 @@ code {
     .main-body-top-right {
         display: flex;
         flex-direction: column;
-        align-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
     }
 
+        .main-body-top-right div {
+            width: 100%;
+        }
+
     .main-body-bottom {
-        width: 50rem;
-        height: 22rem;
+        width: 40%;
+        height: auto;
         background-color: #F1F0EF;
         color: #07203F;
         margin: auto;
@@ -543,6 +551,19 @@ code {
     .resume-headers {
         font-weight: 100;
         font-size: 3rem;
+        white-space: nowrap;
+    }
+
+    .resume-content-container {
+        max-height: 10.75rem;
+        min-height: 10.75rem;
+    }
+
+    .resume-content-container-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
     }
 
     .resume-content {
@@ -550,8 +571,8 @@ code {
         font-weight: 100;
         list-style-type: none;
         margin-top: 1rem;
-    }
 
+    }
 
     .resume-content-time {
         list-style-type: none;
@@ -918,6 +939,41 @@ details > ul {
         background-color: #1a385d;
         transform: translateY(-5px);
     }
+
+.delete-btn {
+    background-color: #07203F;
+    color: #F1F0EF;
+    padding: 5%;
+    margin-right: 5%;
+    margin-left: 10%;
+    font-family: 'Tinos', serif;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.edit-btn-top {
+    background-color: #07203F;
+    color: #F1F0EF;
+    padding: 5%;
+    margin-left: 5%;
+    font-family: 'Tinos', serif;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.edit-btn-bottom {
+    background-color: #07203F;
+    color: #F1F0EF;
+    padding: 5%;
+    margin-left: 5%;
+    font-family: 'Tinos', serif;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
 
 
 
@@ -1442,3 +1498,101 @@ details > ul {
         font-size: 1.25rem;
         padding-left: 2%;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.whole-contact-me-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    background-image:
+    radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
+    radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
+    radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
+    radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
+    radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
+    radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
+    radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(to top, #07203F, #02000D);
+
+    background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+                        repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, no-repeat;
+
+    background-size: 125px 125px, 225px 225px, 325px 325px, 150px 150px, 250px 250px,
+                        350px 350px, 425px 425px, 225px 225px, 325px 325px, 150px 150px,
+                        150px 150px, 250px 250px, 350px 350px, 175px 175px, 275px 275px,
+                        375px 375px, 225px 225px, 250px 250px, 350px 350px, 175px 175px, auto;
+
+    background-position: 33px 100px, 15px 25px, 40px 15px, 9px 5px, 25px 3px,
+                            50px 35px, 57px 47px, 5px 24px, 38px 45px, 95px 63px,
+                            8px 41px, 72px 29px, 79px 50px, 65px 17px, 10px 70px,
+                            0px 63px, 61px 0px, 69px 84px, 18px 89px, 83px 37px, 0 0;
+}
+
+.contact-me-main-header {
+    color: #F1F0EF;
+    font-size: 4rem;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 40%;
+    margin-bottom: 30%;
+}
+
+.main-body-contact-me {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    color: #F1F0EF;
+    flex: 1;
+    margin: auto;
+}
+
+.contact-me-social-media-logos-header {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 30%;
+}
+
+.contact-me-social-media-logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.main-contact-me-info{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.contact-info-container{
+    margin: 5%;
+}
+
+.contact-info-small-headers{
+    font-size: 1.75rem;
+    font-weight: bold;
+}
