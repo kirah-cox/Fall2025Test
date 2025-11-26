@@ -1312,6 +1312,7 @@ code {
 
     .clone-bottom-text {
         padding-left: 5%;
+        padding-right: 5%;
         padding-top: 1rem;
         font-size: 1.15rem;
     }
@@ -1645,9 +1646,87 @@ code {
         padding-bottom: 2rem;
     }
 
+    .clone-header-title {
+        margin: 0;
+    }
+
     .clone-individual-banners {
         height: 5rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .clone-nav-pages {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 30rem) {
+
+
+    .clone-individual-banners {
+        height: 4.25rem;
+        font-size: 1rem;
+    }
+
+    .clone-nav {
+        justify-content: space-evenly;
+    }
+
+    .clone-nav-pages {
+        padding-left: 0 !important;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 25rem) {
+
+    .main-body-clone {
+        width: 95%;
+    }
+    
+    .clone-header-title {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    .clone-nav {
+        justify-content: space-evenly;
+        height: 3rem;
+    }
+
+    .clone-nav-pages {
+        font-size: 0.8rem;
+    }
+    
+    .clone-individual-banners {
+        height: 3.5rem;
+        font-size: 0.9rem;
+    }
+
+    .clone-newsletter{
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+
+    .clone-newsletter-left{
+        margin: 0;
+        margin-top: 2rem;
+    }
+
+    .clone-newsletter-right{
+        margin: 0;
+    }
+
+    .clone-newsletter-text-form{
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 20rem) {
+    .clone-individual-banners {
+        height: 3rem;
+        font-size: 0.8rem;
     }
 }
 
