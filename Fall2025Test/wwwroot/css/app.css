@@ -1158,7 +1158,7 @@ code {
         flex-direction: column;
         justify-content: center;
         align-content: center;
-        width: 55%;
+        width: 67rem;
         margin: auto;
         margin-top: 5rem;
         margin-bottom: 5rem;
@@ -1182,6 +1182,8 @@ code {
     .clone-header-title {
         font-size: 3rem;
         font-weight: bolder;
+        white-space: nowrap;
+        margin-right: 2rem;
     }
 
     .clone-header-whole-search-bar {
@@ -1190,7 +1192,7 @@ code {
 
     .clone-header-search {
         height: 3.5rem;
-        width: 17rem;
+        width: 100%;
         font-size: 1.4rem;
         border: 1px solid #bbbcbd;
         border-right: none;
@@ -1213,6 +1215,7 @@ code {
         border-bottom-right-radius: 5px;
         display: flex;
         align-items: center;
+        height: 3.5rem;
     }
 
     .clone-nav {
@@ -1467,7 +1470,8 @@ code {
     }
 
     .clone-banner-top-picture-with-text-left {
-        width: 35%;
+        height: 5rem;
+        width: 5rem;
     }
 
     .clone-banner-top-picture-with-text-right {
@@ -1486,7 +1490,8 @@ code {
     }
 
     .clone-banner-bottom-picture-with-text-left {
-        width: 35%;
+        height: 5rem;
+        width: 5rem;
     }
 
     .clone-banner-bottom-picture-with-text-right {
@@ -1523,6 +1528,128 @@ code {
             padding-left: 1.5%;
             padding-right: 1.5%;
         }
+
+@media (max-width: 70rem) {
+    .main-body-clone {
+        width: 50rem;
+    }
+    
+    .clone-top-picture-and-banner{
+        flex-direction: column;
+    }
+
+    .clone-top-picture{
+        width: 100%;
+    }
+
+    .clone-banners {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .clone-individual-banners {
+        height: 6rem;
+    }
+
+    .clone-banner-top-picture-with-text-left {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .clone-banner-bottom-picture-with-text-left {
+        height: 4rem;
+        width: 4rem;
+    }
+}
+
+@media (max-width: 55rem) {
+    .main-body-clone {
+        width: 90%;
+    }
+
+    .clone-main-page{
+        flex-direction: column;
+    }
+
+    .clone-main-page-left{
+        width: 100%;
+    }
+
+    .clone-main-page-right {
+        width: 100%;
+        align-items: center;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .clone-banner-top-picture {
+        width: 80%;
+        height: auto;
+        margin: auto;
+        margin-top: 12%;
+    }
+
+    .clone-banner-bottom-picture {
+        width: 80%;
+        height: auto;
+        margin: auto;
+        margin-top: 6%;
+        margin-bottom: 12%;
+    }
+
+    .clone-banner-top-picture-with-text-left {
+        height: 35%;
+        width: 35%;
+    }
+
+    .clone-banner-bottom-picture-with-text-left {
+        height: 35%;
+        width: 35%;
+    }
+
+    .clone-banner-top-picture-with-text-right {
+        font-size: 1rem;
+    }
+
+    .clone-banner-bottom-picture-with-text-right {
+        font-size: 1rem;
+    }
+
+    .clone-banner-heading {
+        font-size: 1.25rem;
+    }
+
+    .clone-banner-text {
+        font-size: 1rem;
+    }
+
+    .clone-banner-top-picture-with-text {
+        margin-top: 6%;
+    }
+
+    .clone-banner-bottom-picture-with-text {
+        margin-top: 6%;
+    }
+
+    .clone-banner-read-more {
+        margin-top: 6%;
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 38rem) {
+    .clone-header{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .clone-individual-banners {
+        height: 5rem;
+        font-size: 1.2rem;
+    }
+}
 
 
 
@@ -1635,60 +1762,60 @@ code {
             padding-left: 2%;
         }
 
-@media (max-width: 80rem) {
-    .API-body-row {
-        flex-direction: column;
-        align-items: center;
+    @media (max-width: 80rem) {
+        .API-body-row {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .API-pokemon {
+            margin-top: 2.5rem;
+            margin-bottom: 5rem;
+        }
+
+        .API-map {
+            margin-bottom: 5rem;
+            width: 70%;
+        }
+
+        .API-header {
+            margin-top: 5rem;
+        }
     }
 
-    .API-pokemon {
-        margin-top: 2.5rem;
-        margin-bottom: 5rem;
+    @media (max-width: 60rem) {
+        .API-map {
+            height: 35rem;
+            width: 80%;
+        }
     }
 
-    .API-map {
-        margin-bottom: 5rem;
-        width: 70%;
+    @media (max-width: 40rem) {
+        .API-map {
+            height: 30rem;
+            width: 90%;
+        }
     }
 
-    .API-header {
-        margin-top: 5rem;
-    }
-}
-
-@media (max-width: 60rem) {
-    .API-map {
-        height: 35rem;
-        width: 80%;
-    }
-}
-
-@media (max-width: 40rem) {
-    .API-map {
-        height: 30rem;
-        width: 90%;
-    }
-}
-
-@media (max-width: 30rem) {
-    .API-map {
-        height: 25rem;
-        width: 90%;
-    }
-}
-
-@media (max-width: 20rem) {
-    .API-pokemon {
-        height: 22rem;
-        width: 100%;
-        padding: 10%;
+    @media (max-width: 30rem) {
+        .API-map {
+            height: 25rem;
+            width: 90%;
+        }
     }
 
-    .API-map {
-        height: 20rem;
-        width: 90%;
+    @media (max-width: 20rem) {
+        .API-pokemon {
+            height: 22rem;
+            width: 100%;
+            padding: 10%;
+        }
+
+        .API-map {
+            height: 20rem;
+            width: 90%;
+        }
     }
-}
 
 
 
