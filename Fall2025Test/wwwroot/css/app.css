@@ -290,6 +290,7 @@ code {
     object-fit: cover;
     object-position: center;
     margin-bottom: 2rem;
+    border-radius: 15px;
 }
 
     .profile-picture:hover {
@@ -310,6 +311,8 @@ code {
     box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.5);
     margin: 1rem;
     text-align: center;
+    outline: none;
+    border: none;
 }
     .contact-me-button:hover {
         background-color: #1a385d;
@@ -633,6 +636,8 @@ code {
         margin: 1rem;
         width: 6rem;
         text-align: center;
+        outline: none;
+        border: none;
     }
 
         .resume-button:hover {
@@ -788,6 +793,7 @@ code {
         width: 100%;
         height: 2rem;
         margin-left: 10%;
+        margin-bottom: 0.5rem;
     }
 
     .table-one-header {
@@ -832,7 +838,7 @@ code {
             }
 
     .table-highlight {
-        background-color: #1a385d;
+        background-color: #1a385d !important;
         color: #F1F0EF;
     }
 
@@ -864,6 +870,11 @@ code {
             content: ' \25BC';
         }
 
+    .action-column {
+        font-weight: 100;
+        font-size: 1.5rem;
+    }
+
     .drop-down {
         position: relative;
         background-color: #F1F0EF;
@@ -872,6 +883,8 @@ code {
         height: 100%;
         display: flex;
         align-items: center;
+        border-radius: 8px;
+        padding-left: 0.5rem;
     }
 
     details > summary {
@@ -891,6 +904,8 @@ code {
         top: 100%;
         left: 0;
         padding: 0.5rem;
+        margin-top: 0.5rem;
+        border-radius: 8px;
         box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.5);
     }
 
@@ -903,6 +918,9 @@ code {
     .search-filter {
         height: 100%;
         width: 100%;
+        outline: none;
+        border: none;
+        border-radius: 8px;
     }
 
         .search-filter::placeholder {
@@ -920,7 +938,18 @@ code {
         height: 100%;
         padding-left: 0.5%;
         padding-right: 0.5%;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        outline: none;
+        border: none;
     }
+
+        .add-new-course-button:hover {
+            background-color: #DBDAD9;
+            transform: translateY(-5px);
+        }
 
     .edit-table-modal-container-top {
         display: flex;
@@ -979,6 +1008,11 @@ code {
     .top-table-row-text-form {
         width: 80%;
         padding: 3%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        border: 1px solid #07203F;
+        outline: none;
+        border-radius: 8px;
     }
 
         .top-table-row-text-form::placeholder {
@@ -1030,6 +1064,11 @@ code {
     .bottom-table-row-text-form {
         width: 80%;
         padding: 3%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        border: 1px solid #07203F;
+        outline: none;
+        border-radius: 8px;
     }
 
         .bottom-table-row-text-form::placeholder {
@@ -1052,6 +1091,8 @@ code {
         margin: 1rem;
         width: 35%;
         text-align: center;
+        outline: none;
+        border: none;
     }
 
         .add-class-button:hover {
@@ -1067,7 +1108,7 @@ code {
         font-family: 'Tinos', serif;
         font-size: 1rem;
         border: none;
-        border-radius: 5px;
+        border-radius: 8px;
     }
 
     .edit-btn-top {
@@ -1078,7 +1119,7 @@ code {
         font-family: 'Tinos', serif;
         font-size: 1rem;
         border: none;
-        border-radius: 5px;
+        border-radius: 8px;
     }
 
     .edit-btn-bottom {
@@ -1089,7 +1130,7 @@ code {
         font-family: 'Tinos', serif;
         font-size: 1rem;
         border: none;
-        border-radius: 5px;
+        border-radius: 8px;
     }
 
 
@@ -1569,6 +1610,8 @@ code {
         box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.5);
         margin: 3%;
         text-align: center;
+        outline: none;
+        border: none;
     }
 
         .fetch-pokemon-button:hover {
@@ -1580,6 +1623,9 @@ code {
         margin: 3%;
         width: 100%;
         height: 2rem;
+        border: 1px solid #07203F;
+        outline: none;
+        border-radius: 8px;
     }
 
         .search-pokemon::placeholder {
