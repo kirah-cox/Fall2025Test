@@ -9,7 +9,7 @@ html, body {
 
 body {
     background-color: #02000D;
-    color: #02000D;
+    color: #F1F0EF;
 }
 
 h1:focus {
@@ -85,14 +85,13 @@ a, .btn-link {
 
     .loading-progress circle {
         fill: none;
-        stroke: #e0e0e0;
         stroke-width: 0.6rem;
         transform-origin: 50% 50%;
         transform: rotate(-90deg);
     }
 
         .loading-progress circle:last-child {
-            stroke: #1b6ec2;
+            stroke: #F1F0EF;
             stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
             transition: stroke-dasharray 0.05s ease-in-out;
         }
@@ -334,12 +333,14 @@ code {
 .education-goals-header {
     font-weight: 100;
     font-size: 2rem;
+    color: #02000D;
 }
 
 .education-goals-paragraph {
     margin-top: 2rem;
     font-weight: 100;
     font-size: 1.2rem;
+    color: #02000D;
 }
 
 .whole-footer {
@@ -530,14 +531,14 @@ code {
         }
 
     .main-body-bottom {
-        width: 40%;
+        width: 45%;
         height: auto;
         background-color: #F1F0EF;
         color: #07203F;
         margin: auto;
         margin-bottom: 5rem;
         margin-top: 0;
-        padding: 1rem;
+        padding: 2%;
         border-radius: 15px;
         box-shadow: 2px 2px 4px rgb(17, 17, 17, 0.5);
     }
@@ -548,9 +549,30 @@ code {
         white-space: nowrap;
     }
 
+    .resume-headers--bottom {
+        font-weight: 100;
+        font-size: 3rem;
+        white-space: nowrap;
+    }
+
     .resume-content-container {
         max-height: 10.75rem;
         min-height: 10.75rem;
+    }
+
+    .resume-content-container-special-one {
+        max-height: 11.6rem;
+        min-height: 11.6rem;
+    }
+
+    .resume-content-container-special-two {
+        max-height: 22.3rem;
+        min-height: 22.3rem;
+    }
+
+    .resume-content-container-special-three {
+        max-height: 33.8rem;
+        min-height: 33.8rem;
     }
 
     .resume-content-container-list {
@@ -579,8 +601,9 @@ code {
         font-weight: 100;
         list-style-type: disc;
         list-style-position: inside;
-        text-indent: 2rem;
         font-size: 1rem;
+        padding-left: 4rem;
+        text-indent: -3rem;
     }
 
     .resume-button-flex {
@@ -608,6 +631,118 @@ code {
             background-color: #1a385d;
             transform: translateY(-5px);
         }
+
+@media (max-width: 80rem) {
+    .main-body-top {
+        flex-direction: column;
+    }
+
+    .main-body-top-line-class {
+        display: none;
+    }
+
+    .resume-content-container {
+        display: flex;
+        max-height: 20rem;
+        min-height: 100%;
+        align-items: end;
+    }
+
+    .resume-content-container-special-one {
+        max-height: 20rem;
+        min-height: 100%;
+        display: flex;
+        align-items: end;
+    }
+
+    .resume-content-container-special-two {
+        max-height: 20rem;
+        min-height: 100%;
+        display: flex;
+        align-items: end;
+    }
+
+    .resume-content-container-special-three {
+        max-height: 20rem;
+        min-height: 100%;
+        display: flex;
+        align-items: end;
+    }
+
+    .resume-headers {
+        margin-top: 15%;
+        margin-bottom: 8%;
+    }
+
+    .main-body-top-horizontal-line-left {
+        margin-bottom: 8%;
+    }
+
+    .main-body-top-horizontal-line-right {
+        margin-bottom: 8%;
+    }
+
+    .resume-main-header {
+        margin-bottom: 0;
+    }
+
+    .main-body-bottom {
+        width: 60%;
+        margin-top: 15%;
+    }
+
+    .resume-headers-bottom{
+        margin: 0;
+    }
+
+    .resume-main-header{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 60rem) {
+    .main-body-bottom {
+        width: 80%;
+        margin-top: 20%;
+        padding: 3%;
+    }
+
+    .resume-headers {
+        margin-top: 19%;
+        margin-bottom: 8%;
+    }
+
+    .main-body-top-horizontal-line-left {
+        margin-bottom: 8%;
+    }
+
+    .main-body-top-horizontal-line-right {
+        margin-bottom: 8%;
+    }
+}
+
+@media (max-width: 40rem) {
+    .main-body-bottom {
+        width: 92%;
+        margin-top: 30%;
+        padding: 4%;
+    }
+
+    .resume-headers {
+        margin-top: 23%;
+        margin-bottom: 11%;
+    }
+
+    .main-body-top-horizontal-line-left {
+        margin-bottom: 11%;
+    }
+
+    .main-body-top-horizontal-line-right {
+        margin-bottom: 11%;
+    }
+}
+
 
 
 
@@ -805,26 +940,26 @@ code {
         border-radius: 15px;
     }
 
-.modal-title-and-exit{
-    display: flex;
-}
+    .modal-title-and-exit {
+        display: flex;
+    }
 
-.exit-modal {
-    position: absolute;
-    z-index: 9999;
-    border: none;
-    cursor: pointer;
-    left: 85%;
-    height: 10%;
-    width: 10%;
-}
+    .exit-modal {
+        position: absolute;
+        z-index: 9999;
+        border: none;
+        cursor: pointer;
+        left: 85%;
+        height: 10%;
+        width: 10%;
+    }
 
-.top-table-row-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
+    .top-table-row-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 
     .top-table-row-form-edit {
         display: flex;
