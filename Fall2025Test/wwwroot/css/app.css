@@ -1552,6 +1552,7 @@ code {
 
     .pokemon-header {
         font-size: 2.5rem;
+        white-space: nowrap;
     }
 
     .fetch-pokemon-button {
