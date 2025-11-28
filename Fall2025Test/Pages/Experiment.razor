@@ -1,12 +1,107 @@
 ﻿@page "/experiment"
+@inject IJSRuntime JSRuntime
+@using Microsoft.Extensions.DependencyInjection
+@using Microsoft.JSInterop
+
+
+@code {
+
+    class SpaceShip
+    {
+        public double Velocity;
+        public int PositionX;
+        public int PositionY;
+        public int RotationAngle;
+
+        public SpaceShip()
+        {
+            Velocity = 0;
+            PositionX = 600;
+            PositionY = 600;
+            RotationAngle = 0;
+        }
+
+        public void Move()
+        {
+            if (keyPressed == "W" && Velocity < 8)
+                Velocity += 0.25;
+
+            if (keyPressed == "S" && Velocity > 0)
+                Velocity -= 0.25;
+
+            if (keyPressed == "A")
+                RotationAngle++;
+
+            if (keyPressed == "D")
+                RotationAngle--;
+        }
+    }
+
+    private DotNetObjectReference<Experiment>? _dotNetRef;
+    private static string keyPressed = "None";
+    private SpaceShip _SpaceShip = new SpaceShip();
+
+    protected override void OnInitialized()
+    {
+        _ = RunGameUpdate(_SpaceShip);
+    }
+
+    private async Task RunGameUpdate(SpaceShip spaceShip)
+    {
+        while (true)
+        {
+            spaceShip.Move();
+            spaceShip.PositionY -= (int)Math.Round(Math.Sin((spaceShip.RotationAngle * 2 * Math.PI) / 360) * spaceShip.Velocity);
+            spaceShip.PositionX += (int)Math.Round(Math.Cos((spaceShip.RotationAngle * 2 * Math.PI) / 360) * spaceShip.Velocity);
+
+            if (keyPressed == "None" && spaceShip.Velocity > 0)
+                spaceShip.Velocity -= 0.05;
+
+            await Task.Delay(16);
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            _dotNetRef = DotNetObjectReference.Create(this);
+            await JSRuntime.InvokeVoidAsync("keyHandler.initialize", _dotNetRef);
+        }
+    }
+
+    [JSInvokable]
+    public async Task OnKeyDown(string key)
+    {
+        keyPressed = key.ToUpper();
+        // Console.WriteLine("Key pressed: " + lastKeyPressed);
+        await InvokeAsync(StateHasChanged);
+    }
+
+    [JSInvokable]
+    public void OnKeyUp(string key)
+    {
+        keyPressed = "None";
+    }
+
+    public void DisposeAsync()
+    {
+        _dotNetRef?.Dispose();
+    }
+}
 
 <head>
     <PageTitle>Experiment</PageTitle>
 </head>
 
+
 <div class="whole-about-me-page">
     <div class="main-body-about-me">
-        <p style="color: #F1F0EF;">Experiment</p>
+        <p>Key Pressed: @(keyPressed == " " ? "Spacebar" : keyPressed)</p>
+        <div style="color: #F1F0EF; position: absolute; top: @(_SpaceShip.PositionY)px; left: @(_SpaceShip.PositionX)px; transform: rotate(@(-_SpaceShip.RotationAngle)deg);">
+            <svg fill="#F1F0EF" height="4rem" width="4rem" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96.522 96.522" xml:space="preserve" stroke="#F1F0EF" transform="rotate(90)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M74.692,65.181l-9.044-7.321c1.319-5.557,1.988-11.532,1.988-17.761c0-19.963-14.052-38.367-18.719-39.988 c-0.426-0.147-0.887-0.147-1.313,0c-4.667,1.621-18.719,20.025-18.719,39.988c0,6.229,0.669,12.205,1.99,17.761l-9.045,7.321 c-0.541,0.438-0.815,1.127-0.724,1.817l3.69,27.787c0.104,0.787,0.663,1.438,1.425,1.658c0.765,0.22,1.582-0.029,2.092-0.638 l14.413-17.225c3.543,2.163,7.527,2.163,11.07,0l14.411,17.225c0.387,0.461,0.951,0.717,1.534,0.717 c0.186,0,0.373-0.026,0.558-0.079c0.762-0.221,1.32-0.871,1.425-1.658l3.69-27.787C75.507,66.309,75.233,65.619,74.692,65.181z M48.262,39.619c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S52.68,39.619,48.262,39.619z"></path> </g> </g></svg>
+        </div>
     </div>
     <footer class="whole-footer">
         <div class="footer-name">

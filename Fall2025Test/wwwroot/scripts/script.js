@@ -473,3 +473,34 @@ window.site.registerHandler(function () {
         $('#modal-bottom-edit').removeClass('edit-table-modal-visible-bottom').addClass('edit-table-modal-hidden-bottom');
     });
 });
+
+
+window.keyHandler = {
+    initialize: (dotNetHelper) => {
+        const heldKeys = new Set();
+        const validKeys = ["w", "a", "s", "d", " "]; // spacebar is " "
+        let lastKeyTime = 0;
+        const throttleInterval = 50;
+
+        document.addEventListener("keydown", (event) => {
+            const key = event.key.toLowerCase();
+            const currentTime = Date.now();
+
+            if (validKeys.includes(key) && !heldKeys.has(key)) {
+                if (currentTime - lastKeyTime >= throttleInterval) {
+                    heldKeys.add(key);
+                    dotNetHelper.invokeMethodAsync("OnKeyDown", key);
+                    lastKeyTime = currentTime;
+                }
+            }
+        });
+
+        document.addEventListener("keyup", (event) => {
+            const key = event.key.toLowerCase();
+            if (heldKeys.has(key)) {
+                heldKeys.delete(key);
+                dotNetHelper.invokeMethodAsync("OnKeyUp", key);
+            }
+        });
+    }
+};
