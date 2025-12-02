@@ -476,7 +476,7 @@ code {
         color: #F1F0EF;
         flex: 1;
         margin: auto;
-        width: 90%;
+        width: 80%;
     }
 
     .main-body-top {
@@ -1971,3 +1971,80 @@ code {
         font-size: 1.75rem;
         font-weight: bold;
     }
+
+
+
+
+
+
+
+
+
+
+.whole-experiment-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 91.5dvh;
+    width: 100%;
+    background-image:
+    radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
+    radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
+    radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
+    radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.2) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 1.2px, transparent 1.2px),
+    radial-gradient(circle, rgba(255,255,255,0.2) 1.8px, transparent 1.8px),
+    radial-gradient(circle, rgba(255,255,255,0.15) 2.5px, transparent 2.5px),
+    radial-gradient(circle, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.05) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(to top, #07203F, #02000D);
+
+    background-repeat: repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+                        repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, no-repeat;
+
+    background-size: 125px 125px, 225px 225px, 325px 325px, 150px 150px, 250px 250px,
+                        350px 350px, 425px 425px, 225px 225px, 325px 325px, 150px 150px,
+                        150px 150px, 250px 250px, 350px 350px, 175px 175px, 275px 275px,
+                        375px 375px, 225px 225px, 250px 250px, 350px 350px, 175px 175px, auto;
+
+    background-position: 33px 100px, 15px 25px, 40px 15px, 9px 5px, 25px 3px,
+                            50px 35px, 57px 47px, 5px 24px, 38px 45px, 95px 63px,
+                            8px 41px, 72px 29px, 79px 50px, 65px 17px, 10px 70px,
+                            0px 63px, 61px 0px, 69px 84px, 18px 89px, 83px 37px, 0 0;
+}
+
+.main-body-experiment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.top-game-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+}
+
+.top-game-bar div {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

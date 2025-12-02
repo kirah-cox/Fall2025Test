@@ -478,7 +478,7 @@ window.site.registerHandler(function () {
 window.keyHandler = {
     initialize: (dotNetHelper) => {
         const heldKeys = new Set();
-        const validKeys = ["w", "a", "s", "d", " "]; // spacebar is " "
+        const validKeys = ["w", "a", "s", "d", " "];
         let lastKeyTime = 0;
         const throttleInterval = 50;
 
