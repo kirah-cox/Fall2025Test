@@ -252,7 +252,7 @@
             foreach (var bullet in Bullets)
             {
                 bullet.Move();
-                if (bullet.PositionX < 20 || bullet.PositionX > 1900 || bullet.PositionY < 125 || bullet.PositionY > 800)
+                if (bullet.PositionX < 0 || bullet.PositionX > 1500 || bullet.PositionY < 0 || bullet.PositionY > 600)
                     bulletsToRemove.Add(bullet);
 
                 foreach (var asteroid in Asteroids)
